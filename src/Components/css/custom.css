@@ -1,0 +1,215 @@
+/** ADD YOUR AWESOME CODES HERE **/
+
+.ulockd-home-slider {
+  float: left;
+  width: 100%;
+}
+.bannerH {
+  background-image: url("/public/assets/images/banner_img2.png");
+  padding-bottom: 150px;
+  position: relative;
+}
+.slide_text {
+  margin-top: auto;
+  padding-left: 15px;
+}
+#home .News {
+  padding-bottom: 50px;
+}
+section.inner_banner {
+  min-height: 100px;
+}
+.Login .loginform {
+  width: auto;
+  padding-top: 30px;
+  box-shadow: 0px 0px 15px #b4b4b4;
+}
+.Login .loginform a {
+  font-size: 12px;
+}
+.why_us_login {
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 15px #b4b4b4;
+}
+.why_us_login_inner {
+  margin-left: 20px;
+}
+.why_us_login .text {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: #095a83;
+}
+.why_us_login_inner ul li::before {
+  font-family: FontAwesome;
+  content: "\f061";
+  margin-right: 10px;
+  margin-left: -20px;
+}
+ul.login_contact li .fa {
+  color: #095a83;
+  margin-right: 10px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.modal::-webkit-scrollbar-thumb {
+  display: none;
+}
+.modal {
+  animation: zoomOut;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+}
+.modal.show {
+  animation: zoomIn;
+  animation-duration: 1.5s;
+}
+.modal-content {
+  border: 10px solid rgba(255, 255, 255, 0.4);
+}
+.modal-title {
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+}
+.square-button {
+  padding: 20px 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  transition: all 40ms linear;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.14),
+    rgba(255, 255, 255, 0.14)
+  );
+  transition: transform 100ms, box-shadow 100ms, background-color 200ms,
+    color 200ms;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+  display: table-cell;
+}
+.button_holder {
+  display: table;
+  margin: 20px auto;
+}
+.square-button.btn-success {
+  box-shadow: 0px 5px rgba(40, 167, 69, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0 0 3px rgba(252, 252, 252, 0.6);
+}
+.square-button.btn-success:hover {
+  box-shadow: 0px 5px rgba(40, 167, 69, 0.5);
+}
+.square-button.btn-warning {
+  box-shadow: 0px 5px rgba(255, 193, 7, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0 0 3px rgba(252, 252, 252, 0.6);
+}
+.square-button.btn-warning:hover {
+  box-shadow: 0px 5px rgba(255, 193, 7, 0.5);
+}
+.square-button.btn-danger {
+  box-shadow: 0px 5px rgba(220, 53, 69, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0 0 3px rgba(252, 252, 252, 0.6);
+}
+.square-button.btn-danger:hover {
+  box-shadow: 0px 5px rgba(220, 53, 69, 0.5);
+}
+.square-button.btn-primary {
+  box-shadow: 0px 5px rgba(0, 123, 255, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0 0 3px rgba(252, 252, 252, 0.6);
+}
+.square-button.btn-primary:hover {
+  box-shadow: 0px 5px rgba(0, 123, 255, 0.5);
+}
+.square-button.btn-info {
+  box-shadow: 0px 5px rgba(23, 162, 184, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0 0 3px rgba(252, 252, 252, 0.6);
+}
+.square-button.btn-info:hover {
+  box-shadow: 0px 5px rgba(23, 162, 184, 0.5);
+}
+.square-button.btn-purple {
+  box-shadow: 0px 5px rgba(178, 60, 253, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0 0 3px rgba(252, 252, 252, 0.6);
+}
+.square-button.btn-purple:hover {
+  box-shadow: 0px 5px rgba(178, 60, 253, 0.5);
+}
+.square-button:hover {
+  opacity: 0.8;
+  color: #fff;
+  transform: scale(0.95, 0.95);
+}
+.square-button:active {
+  transform: translateY(5px);
+}
+.square-button .fa {
+  font-size: 42px;
+}
+.square-button:not(:hover) .fa {
+  transition: 0.9s;
+}
+.square-button:hover .fa {
+  transform: rotateZ(360deg);
+  transition: 0.9s;
+}
+#classesModal .square-button {
+  font-size: 24px;
+}
+#classesModal .square-button span {
+  font-size: 42px;
+}
+.homeModal .modal-footer {
+  display: block;
+}
+#collegeModal .square-button {
+  min-width: 190px;
+}
+.btn-purple {
+  color: #fff;
+  background-color: #b23cfd;
+}
+.btn-purple:focus,
+.btn-purple:hover {
+  background-color: #a316fd;
+}
+
+@media screen and (max-width: 576px) {
+  .bannerH {
+    padding-bottom: 130px;
+  }
+  .News .tab_menu {
+    padding: 0;
+  }
+  .square-button {
+    width: 150px;
+    height: 150px;
+    padding: 10px 15px;
+  }
+  #classesModal .square-button span {
+    font-size: 32px;
+  }
+  .square-button .fa {
+    font-size: 32px;
+  }
+  #dydModal .square-button {
+    font-size: 18px;
+  }
+  .modalafterdyd .square-button {
+    font-size: 16px;
+  }
+}
