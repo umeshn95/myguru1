@@ -1,18 +1,21 @@
 import React from 'react';
+import { Dropdown } from 'react-bootstrap';
 import './css/bootstrap.min.css';
 import './css/pogo-slider.min.css';
 import './css/style.css';
 import './css/custom.css';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 const myGuruHome = () => {
+
+
+
     return (
 
         <>
             {/*  */}
 
             <Header />
-            <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
-                {/* <!-- Start Banner --> */}
                 <div className="ulockd-home-slider mt-4">
                     {/* <!--<div className="container-fluid">--> */}
                     <div className="row">
@@ -143,7 +146,7 @@ const myGuruHome = () => {
                                     </div>
                                     <div className="col-6 text-center">
                                         <div className="button_holder">
-                                            <a data-toggle='modal' href="#" data-target="#dydModal" className="btn btn-lg btn-warning square-button" data-dismiss="modal"
+                                            <a data-toggle='modal' href="#" data-target="#dydModal12th" className="btn btn-lg btn-warning square-button" data-dismiss="modal"
                                                 id="ett">Class<br /><span>11-12<sup>th</sup></span></a>
                                         </div>
                                     </div>
@@ -192,6 +195,7 @@ const myGuruHome = () => {
                         </div>
                     </div>
                 </div>
+
 
                 <div className="modal homeModal" id="dydModal7th">
                     <div className="modal-dialog modal-dialog-centered">
@@ -268,6 +272,43 @@ const myGuruHome = () => {
                         </div>
                     </div>
                 </div>
+
+
+                <div className="modal homeModal" id="dydModal12th">
+                    <div className="modal-dialog modal-dialog-centered">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h4 className="modal-title">choose</h4>
+                                <button type="button" className="close d-none" data-dismiss="dydModal2th" aria-hidden="true">×</button>
+                            </div>
+                            <div className="container"></div>
+                            <div className="modal-body">
+                                <div className="row">
+                                    <div className="col-6 text-center">
+                                        {/* <!--<a data-toggle="modal" href="#myModal2" className="btn btn-primary">Launch modal</a>--> */}
+                                        
+                                        <div className="button_holder">
+                                            <a data-toggle='modal' href="/paymentsummary" className="btn btn-lg btn-success square-button"
+                                            >Class<br /><span>11<sup>th</sup></span></a>
+                                        </div>
+                                    </div>
+                                    <div className="col-6 text-center">
+                                        {/* <!--<a data-toggle="modal" href="#myModal2" className="btn btn-primary">Launch modal</a>--> */}
+                                        <div className="button_holder">
+                                            <a data-toggle='modal' href="/12th/paymentsummary" className="btn btn-lg btn-primary square-button"
+                                            >Class<br /><span>12<sup>th</sup></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="modal-footer text-center">
+                                <a href="#" data-dismiss="modal" className="btn btn-dark">Close</a>
+                                {/* <!--<a href="#" className="btn btn-primary">Save changes</a>--> */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
 
 
@@ -1072,25 +1113,7 @@ const myGuruHome = () => {
                     </div>
                 </div>
 
-                {/* <!-- ALL JS FILES --> */}
-                <script src="assets/js/jquery.min.js"></script>
-                <script src="assets/js/popper.min.js"></script>
-                <script src="assets/js/bootstrap.min.js"></script>
-                <script src="assets/owlcarousel1/jquery.min.js"></script>
-                <script src="assets/owlcarousel1/owl.carousel.min.js"></script>
-                {/* <!-- ALL PLUGINS --> */}
-                <script src="assets/js/jquery.magnific-popup.min.js"></script>
-                <script src="assets/js/jquery.pogo-slider.min.js"></script>
-                <script src="assets/js/slider-index.js"></script>
-                <script src="assets/js/smoothscroll.js"></script>
-                <script src="assets/js/form-validator.min.js"></script>
-                <script src="assets/js/contact-form-script.js"></script>
-                <script src="assets/js/isotope.min.js"></script>
-                <script src="assets/js/images-loded.min.js"></script>
-                <script src="assets/js/custom.js"></script>
-                <script src="assets/js/main.js"></script>
-
-            </body>
+    
         </ >
     )
 }

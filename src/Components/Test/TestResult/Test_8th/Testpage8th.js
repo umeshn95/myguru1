@@ -41,7 +41,8 @@ const Testpage8th = () => {
 
     const sendDataResult = (industry, question, id) => {
         let item = { id, industry, question, ans1, ans2, ans3, ans4, ans5 }
-        fetch("/api/8th/testresult", {
+        setLoading(true)
+        fetch(`${process.env.REACT_APP_API_URL}/api/8th/testresult`, {
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -59,7 +60,7 @@ const Testpage8th = () => {
     //
     const findRightAns = (id, value) => {
         let item = { id, value }
-        fetch("/api/8th/findans/", {
+        fetch(`${process.env.REACT_APP_API_URL}/api/8th/findans/`, {
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -75,6 +76,7 @@ const Testpage8th = () => {
     }
 
     const getAns = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/8th/question`, {
             method: "GET",
             headers: {
@@ -94,6 +96,7 @@ const Testpage8th = () => {
     }
 
     const getData = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/8th/studentquestion`, {
             method: "GET",
             headers: {
@@ -113,6 +116,7 @@ const Testpage8th = () => {
     }
 
     const deleteData = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/8th/deleteresult`, {
             method: "GET",
             headers: {
@@ -139,6 +143,7 @@ const Testpage8th = () => {
         setFindStatus("")
         var k = count + pk
         setCount(k)
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/8th/question?page=${k}`, {
             method: "GET",
             headers: {

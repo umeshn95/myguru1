@@ -17,7 +17,6 @@ const Barchar = ({Industry}) => {
             barThickness: 16,
             maxBarThickness: 18,
             minBarLength: 6,
-       
           }
         ]
       }

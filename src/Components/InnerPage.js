@@ -28,7 +28,7 @@ const InnerPage = (props) => {
 //============================================== Get Collage Data like Images ============================================//
     const getCarrer = () => {
         setLoading(true)
-        fetch(`${process.env.R.API_URL}/api/courses/${props.match.params.id}/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/courses/${props.match.params.id}/`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -70,7 +70,7 @@ return (
 
                     <div className="bannerImg">
                         {/* <img src= {"https://myguruonline.herokuapp.com" + data.bannerImage} alt="" width="90" /> */}
-                        <img src= {process.env.R.API_URL + data.bannerImage} alt="" width="90" />
+                        <img src= {process.env.REACT_APP_API_URL + data.bannerImage} alt="" width="90" />
                     </div>
 
                 </div>
