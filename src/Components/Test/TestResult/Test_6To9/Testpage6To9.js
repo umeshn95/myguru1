@@ -5,7 +5,6 @@ import Loader from "../../../Loader/Loader";
 import { useHistory } from "react-router-dom";
 import Header from "../../../Header";
 import NewTimer from "../../../../NewTimer";
-import env from "react-dotenv";
 
 const Testpage6To9 = () => {
   const alert = useAlert();
@@ -15,9 +14,6 @@ const Testpage6To9 = () => {
   const [dataExam, setDataExam] = useState([]);
   const [count, setCount] = useState(1);
   const [dataTemp, setDataTemp] = useState([]);
-  // console.log('count', count)
-  // console.log('data', dataTemp.count)
-
   let user = JSON.parse(localStorage.getItem("user-details"));
 
   const [ans1, setAns1] = useState(0);
@@ -38,12 +34,8 @@ const Testpage6To9 = () => {
   };
 
   const sendDataResult = (industry, question, id) => {
-    let user = JSON.parse(localStorage.getItem("user-details"));
     let item = { id, industry, question, ans1, ans2, ans3, ans4, ans5 };
-    console.log(item);
-    setLoading(true);
     fetch(`${process.env.REACT_APP_API_URL}/api/6th/testresult`, {
-      // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/6to9/testresult", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -52,27 +44,21 @@ const Testpage6To9 = () => {
       },
       body: JSON.stringify(item),
     }).then((result) => {
-      // console.log("Result", result.status)
       result.json().then((resp) => {
-        // console.log(resp)
         setLoading(false);
       });
     });
   };
 
   const getAns = () => {
-    setLoading(true);
     fetch(`${process.env.REACT_APP_API_URL}/api/6th/question`, {
-      // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/6to9/question", {
       method: "GET",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
     }).then((result) => {
-      // console.log("Result", result.status)
       result.json().then((resp) => {
-        // console.log(resp)
         setData(resp.results);
         setDataTemp(resp);
         setLoading(false);
@@ -84,11 +70,7 @@ const Testpage6To9 = () => {
   };
 
   const getData = () => {
-    let user = JSON.parse(localStorage.getItem("user-details"));
-    // const token = user.access;
-    setLoading(true);
     fetch(`${process.env.REACT_APP_API_URL}/api/6th/studentquestion`, {
-      // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/6to9/studentquestion", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -96,9 +78,7 @@ const Testpage6To9 = () => {
         Authorization: `Bearer ${user && user.access}`,
       },
     }).then((result) => {
-      // console.log("Result", result.status)
       result.json().then((resp) => {
-        // console.log(resp)
         setDataExam(resp.data);
         setLoading(false);
         if (result.status !== 200) {
@@ -109,11 +89,7 @@ const Testpage6To9 = () => {
   };
 
   const deleteData = () => {
-    let user = JSON.parse(localStorage.getItem("user-details"));
-    // const token = user.access;
-    setLoading(true);
     fetch(`${process.env.REACT_APP_API_URL}/api/6th/deleteresult`, {
-      // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/6to9/deleteresult", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -121,9 +97,7 @@ const Testpage6To9 = () => {
         Authorization: `Bearer ${user && user.access}`,
       },
     }).then((result) => {
-      // console.log("Result", result.status)
       result.json().then((resp) => {
-        // console.log('resp', resp)
         setLoading(false);
       });
     });
@@ -137,23 +111,19 @@ const Testpage6To9 = () => {
     setAns5(0);
     var k = count + pk;
     setCount(k);
-    setLoading(true);
     fetch(`${process.env.REACT_APP_API_URL}/api/6th/question?page=${k}`, {
-      // fetch(`https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/6to9/question?page=${k}`, {
       method: "GET",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
     }).then((result) => {
-      // console.log("Result", result.status)
       if (result.status === 404) {
         setLoading(false);
         history.push("/6th/result");
         return alert.success("Your Task is completed ");
       }
       result.json().then((resp) => {
-        // console.log(resp)
         setData(resp.results);
         setDataTemp(resp);
         setLoading(false);
@@ -163,16 +133,7 @@ const Testpage6To9 = () => {
       });
     });
   };
-
-  // const handleChange = event => {
-  //     const target = event.target
-  //     const value = target.value
-  //     const id = target.name
-  //     setCurAnsId(id)
-  //     setCurAns(value)
-
-  //     // console.log('..................... == ', value,name)
-  // }
+  
 
   return (
     <Fragment>
@@ -182,13 +143,6 @@ const Testpage6To9 = () => {
         <Fragment>
           <div>
             <Header />
-            <body
-              id="home"
-              data-spy="scroll"
-              data-target="#navbar-wd"
-              data-offset="98"
-            >
-              {/* <!-- Welcome My Guru section  --> */}
               <div className="section margin-top_7">
                 <div className="container-fluid">
                   <div className="row">
@@ -265,7 +219,6 @@ const Testpage6To9 = () => {
                                     onChange={() => setAns3(1)}
                                   />
                                 </li>
-                                {/* <li className="col-lg-12">(c) {e.c} <input className="float-right mt-3" type="checkbox" id="flexCheckDefault" name={e.id} value={e.ans3} onChange={handleChange} /></li> */}
                                 {e.d ? (
                                   <>
                                     <li className="col-lg-12">
@@ -323,25 +276,6 @@ const Testpage6To9 = () => {
                 </div>
               </div>
               {/* <!-- end section --> */}
-
-              {/* <!-- ALL JS FILES --> */}
-              <script src="assets/js/jquery.min.js"></script>
-              <script src="assets/js/popper.min.js"></script>
-              <script src="assets/js/bootstrap.min.js"></script>
-              <script src="assets/owlcarousel1/jquery.min.js"></script>
-              <script src="assets/owlcarousel1/owl.carousel.min.js"></script>
-              {/* <!-- ALL PLUGINS --> */}
-              <script src="assets/js/jquery.magnific-popup.min.js"></script>
-              <script src="assets/js/jquery.pogo-slider.min.js"></script>
-              <script src="assets/js/slider-index.js"></script>
-              <script src="assets/js/smoothscroll.js"></script>
-              <script src="assets/js/form-validator.min.js"></script>
-              <script src="assets/js/contact-form-script.js"></script>
-              <script src="assets/js/isotope.min.js"></script>
-              <script src="assets/js/images-loded.min.js"></script>
-              <script src="assets/js/custom.js"></script>
-              <script src="assets/js/main.js"></script>
-            </body>
           </div>
         </Fragment>
       )}

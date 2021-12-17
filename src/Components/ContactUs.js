@@ -16,46 +16,46 @@ const ContactUs = () => {
                 {/* <!-- Popular Programs section --> */}
 
                 {/* margn-top */}
-                <div class="section layout_padding ContactUs ">
-                    <div class="container">
-                        <div class="contactDv">
-                            <div class="row">
-                                <div class="col-md-3 contaactText">
-                                    <div class="contact-info">
-                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                <div className="section layout_padding ContactUs ">
+                    <div className="container">
+                        <div className="contactDv">
+                            <div className="row">
+                                <div className="col-md-3 contaactText">
+                                    <div className="contact-info">
+                                        <i className="fa fa-envelope" aria-hidden="true"></i>
                                         <h2>Contact Us</h2>
                                         <h4>We would love to hear from you !</h4>
                                     </div>
                                 </div>
-                                <div class="col-md-9">
-                                    <div class="contact-form">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-10" for="fname">First Name:</label><br />
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" />
+                                <div className="col-md-9">
+                                    <div className="contact-form">
+                                        <div className="form-group">
+                                            <label className="control-label col-sm-10" for="fname">First Name:</label><br />
+                                            <div className="col-sm-10">
+                                                <input type="text" className="form-control" id="fname" placeholder="Enter First Name" name="fname" />
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-10 mt-4" for="lname">Last Name:</label><br />
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" />
+                                        <div className="form-group">
+                                            <label className="control-label col-sm-10 mt-4" for="lname">Last Name:</label><br />
+                                            <div className="col-sm-10">
+                                                <input type="text" className="form-control" id="lname" placeholder="Enter Last Name" name="lname" />
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-10 mt-4" for="email">Email:</label><br />
-                                            <div class="col-sm-10">
-                                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" />
+                                        <div className="form-group">
+                                            <label className="control-label col-sm-10 mt-4" for="email">Email:</label><br />
+                                            <div className="col-sm-10">
+                                                <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" />
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-10 mt-4" for="comment">Comment:</label><br />
-                                            <div class="col-sm-10">
-                                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                        <div className="form-group">
+                                            <label className="control-label col-sm-10 mt-4" for="comment">Comment:</label><br />
+                                            <div className="col-sm-10">
+                                                <textarea className="form-control" rows="5" id="comment"></textarea>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <div class=" col-sm-10 mt-3">
-                                                <button type="submit" class="btn btn-default p-3">Submit</button>
+                                        <div className="form-group">
+                                            <div className=" col-sm-10 mt-3">
+                                                <button type="submit" className="btn btn-default p-3">Submit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@ const ContactUs = () => {
 
 
 
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
 
 
                 {/* <!-- ALL JS FILES -->
@@ -94,11 +94,11 @@ const ContactUs = () => {
   $(".btn-group, .dropdown").hover(
   function () {
       $('>.dropdown-menu', this).stop(true, true).fadeIn("fast");
-      $(this).addClass('open');
+      $(this).addclassName('open');
   },
   function () {
       $('>.dropdown-menu', this).stop(true, true).fadeOut("fast");
-      $(this).removeClass('open');
+      $(this).removeclassName('open');
   });
 </script> */}
 

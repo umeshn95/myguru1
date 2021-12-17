@@ -13,31 +13,31 @@ const ExamList = () => {
 
                 {/* <!-- Start Banner --> */}
                 {/* margin-top_7 */}
-                <section class="section insideBanner ">
-                    <div class="row justify-content-md-center">
-                        <div class="col-md-8">
-                            <div class="BannerContent">
+                <section className="section insideBanner ">
+                    <div className="row justify-content-md-center">
+                        <div className="col-md-8">
+                            <div className="BannerContent">
                                 <h1>CMAT Exam 2021 - Admit Card, Latest News, Exam Date (Announced), Syllabus, Pattern, Result, Cutoff</h1>
                                 <small>Updated on 24th Mar, 2021</small>
-                                <div class="DateBlock">
-                                    <span class="left"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                                    <span class="right"><span class="type_of_card">Exam Date</span> <i class="date">31 Mar, 2021</i> </span>
+                                <div className="DateBlock">
+                                    <span className="left"><i className="fa fa-calendar" aria-hidden="true"></i></span>
+                                    <span className="right"><span className="type_of_card">Exam Date</span> <i className="date">31 Mar, 2021</i> </span>
                                 </div>
-                                <div class="btnGroup">
-                                    <a href="" class="button btn-primary">Download Brochure</a>
+                                <div className="btnGroup">
+                                    <a href="" className="button btn-primary">Download Brochure</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
                 {/* <!-- End Banner --> */}
                 {/* <!--Exam Sub Nav Bar Start--> */}
-                <section class="section ExamNav">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <ul class="ExamSubNav">
+                <section className="section ExamNav">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <ul className="ExamSubNav">
                                     <li>
                                         <a href="#admit">Admit Card</a>
                                     </li>
@@ -78,12 +78,12 @@ const ExamList = () => {
                 </section>
                 {/* <!-- End Section --> */}
 
-                <section class="section ExamDetails">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="LatestUpdate">
-                                    <div class="latest-Block">
+                <section className="section ExamDetails">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-9">
+                                <div className="LatestUpdate">
+                                    <div className="latest-Block">
                                         <strong>Latest Update for CMAT</strong>
                                         <ul>
                                             <li><b>2 days ago:</b> <p><a href="javascript:;">CMAT 2021 Admit Card</a> released on March 24 at 5 pm. CMAT exam date 2021 is March 31.</p> </li>
@@ -97,15 +97,15 @@ const ExamList = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="AdmitCard" id="">
+                                <div className="AdmitCard" id="">
                                     <h1>
                                         About CMAT 2021
                                     </h1>
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
                                             nisi lorem egestas vitae scel<span id="dots">...</span></p>
 
-                                        <div class="hiddenContent" id="more">
+                                        <div className="hiddenContent" id="more">
                                             <p>erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
                                                 auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi,
                                                 sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
@@ -126,20 +126,20 @@ const ExamList = () => {
 
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="myFunction()" id="myBtn" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="myFunction()" id="myBtn" className="float-right">Read more</a>
                                 </div>
 
-                                <div class="AdmitCard" id="admit">
+                                <div className="AdmitCard" id="admit">
                                     <h1>
                                         CMAT 2021 Admit Card
                                     </h1>
 
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
 
                                         <p>The National Testing Agency (NTA) has released the CMAT admit card 2021 in online mode on March 24, 2021 (5:00 PM) at cmat.nta.nic.in. Applicants can download the admit card of CMAT 2021 by entering their CMAT login credentials like application number and date of birth. Candidates must keep the CMAT 2021 admit card safe till admissions are completed as a duplicate one will not be issued. CMAT self declaration form is necessary to carry alongwith CMAT 2021 admit card to the test centre.
                                             <span id="dots2">...</span></p>
 
-                                        <div class="hiddenContent" id="more2">
+                                        <div className="hiddenContent" id="more2">
                                             <p><b>Also read-</b> Know how to prepare for CMAT 2021?</p>
                                             <p>Notice Issued by NTA Regarding CMAT Exam and CMAT Admit Card 2021 Details</p>
                                             <strong>How to download CMAT admit card 2021?</strong>
@@ -150,22 +150,22 @@ const ExamList = () => {
                                             <p><b>Step 5: </b>Check details and save the admit card in PDF format and take a printout of the same.</p>
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContent()" id="myBtn2" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContent()" id="myBtn2" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard">
+                                <div className="AdmitCard">
                                     <h1>CMAT 2021 Exam Centers</h1>
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
 
                                         <p>
 
                                             <span id="dots5">...</span>
                                         </p>
 
-                                        <div class="hiddenContent" id="more5">
+                                        <div className="hiddenContent" id="more5">
 
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
 
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>State</th>
@@ -271,20 +271,20 @@ const ExamList = () => {
                                             </table>
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContentfour()" id="myBtn5" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContentfour()" id="myBtn5" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard">
+                                <div className="AdmitCard">
                                     <h1>Documents Required at Exam</h1>
-                                    <ul class="syllabusList">
+                                    <ul className="syllabusList">
                                         <li>CMAT 2021 admit card</li>
                                         <li>Photo identity proof</li>
                                     </ul>
                                 </div>
-                                <div class="AdmitCard" id="date">
+                                <div className="AdmitCard" id="date">
                                     <h1>
                                         CMAT 2021 Important Dates
                                     </h1>
-                                    <table class="table table-bordered">
+                                    <table className="table table-bordered">
                                         <thead>
                                             <tr>
                                                 <th colspan="2">Past Dates and Events</th>
@@ -325,18 +325,18 @@ const ExamList = () => {
                                     </table>
 
                                 </div>
-                                <div class="AdmitCard" id="eligiblity">
+                                <div className="AdmitCard" id="eligiblity">
                                     <h1>
                                         CMAT 2021 Eligibility Criteria
                                     </h1>
 
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
                                         <p>National Testing Agency has released the CMAT eligibility criteria in the official notification. The CMAT 2021 eligibility criteria are also mentioned on the CMAT official website. Applicants who fulfill the academic qualifications, age limit as specified in CMAT eligibility criteria can apply for the entrance exam. </p>
                                         <strong>CMAT 2021 eligibility criteria:</strong>
-                                        <p class="exmDetail"><b>1. Nationality: </b>To apply for CMAT 2021, candidates must be citizens of India.</p>
-                                        <p class="exmDetail"><b>2. Academic qualifications: </b>Graduates in any discipline from recognized institutes can apply for the CMAT exam. Final-year students can also apply for the computer-based online CMAT 2021.</p>
-                                        <p class="exmDetail"><b>3. Age limit: </b>There is no age limit for appearing in CMAT.<span id="dots9">...</span></p>
-                                        <div class="hiddenContent" id="more9">
+                                        <p className="exmDetail"><b>1. Nationality: </b>To apply for CMAT 2021, candidates must be citizens of India.</p>
+                                        <p className="exmDetail"><b>2. Academic qualifications: </b>Graduates in any discipline from recognized institutes can apply for the CMAT exam. Final-year students can also apply for the computer-based online CMAT 2021.</p>
+                                        <p className="exmDetail"><b>3. Age limit: </b>There is no age limit for appearing in CMAT.<span id="dots9">...</span></p>
+                                        <div className="hiddenContent" id="more9">
                                             <strong>Also Read:</strong>
                                             <ul>
                                                 <li><a href="javascript:;">How to Prepare for CMAT 2021?</a></li>
@@ -352,20 +352,20 @@ const ExamList = () => {
 
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContenteight()" id="myBtn9" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContenteight()" id="myBtn9" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard" id="application">
+                                <div className="AdmitCard" id="application">
                                     <h1>
                                         CMAT 2021 Application Process
                                     </h1>
-                                    <p class="exmDetail">Mode of Application : <span>Online</span></p>
-                                    <p class="exmDetail">Mode of Payment : <span>Net Banking | Credit Card | Debit Card | Other</span></p>
-                                    <div class="viewMoreContent">
+                                    <p className="exmDetail">Mode of Application : <span>Online</span></p>
+                                    <p className="exmDetail">Mode of Payment : <span>Net Banking | Credit Card | Debit Card | Other</span></p>
+                                    <div className="viewMoreContent">
 
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
                                             nisi lorem egestas vitae scel<span id="dots10">...</span></p>
 
-                                        <div class="hiddenContent" id="more10">
+                                        <div className="hiddenContent" id="more10">
                                             <p>erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
                                                 auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi,
                                                 sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
@@ -386,11 +386,11 @@ const ExamList = () => {
 
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreNine()" id="myBtn10" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreNine()" id="myBtn10" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard" id="syllabus">
+                                <div className="AdmitCard" id="syllabus">
                                     <h1>CMAT 2021 Syllabus</h1>
-                                    <ul class="syllabusList">
+                                    <ul className="syllabusList">
                                         <li>Quantitative techniques and data interpretation</li>
                                         <li>Logical reasoning</li>
                                         <li>Language comprehension</li>
@@ -398,90 +398,90 @@ const ExamList = () => {
                                         <li>Entrepreneurship</li>
                                     </ul>
                                 </div>
-                                <div class="AdmitCard">
+                                <div className="AdmitCard">
                                     <h1>CMAT E-books and Sample Papers</h1>
-                                    <div class="careersBox">
-                                        <div id="owl-carousel-three" class="career owl-carousel owl-theme">
-                                            <div class="item">
-                                                <div class="careersContent">
-                                                    <div class="thumb">
+                                    <div className="careersBox">
+                                        <div id="owl-carousel-three" className="career owl-carousel owl-theme">
+                                            <div className="item">
+                                                <div className="careersContent">
+                                                    <div className="thumb">
                                                         <img src="assets/images/innerpage-img/sample-img/samp1.png" alt="" />
                                                     </div>
-                                                    <div class="sampletext">
+                                                    <div className="sampletext">
                                                         <h5><a href="">JEE Main 2021 March 17 question paper...</a></h5>
-                                                        <p class="breif"><i class="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
-                                                        <div class="dowloads ebook-download-button">
-                                                            <a href="" class="button btn-primary popup">Free Download</a>
+                                                        <p className="breif"><i className="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
+                                                        <div className="dowloads ebook-download-button">
+                                                            <a href="" className="button btn-primary popup">Free Download</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="careersContent">
-                                                    <div class="thumb">
+                                            <div className="item">
+                                                <div className="careersContent">
+                                                    <div className="thumb">
                                                         <img src="assets/images/innerpage-img/sample-img/samp1.png" alt="" />
                                                     </div>
-                                                    <div class="sampletext">
+                                                    <div className="sampletext">
                                                         <h5><a href="">JEE Main 2021 March 17 question paper...</a></h5>
-                                                        <p class="breif"><i class="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
-                                                        <div class="dowloads ebook-download-button">
-                                                            <a href="" class="button btn-primary popup">Free Download</a>
+                                                        <p className="breif"><i className="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
+                                                        <div className="dowloads ebook-download-button">
+                                                            <a href="" className="button btn-primary popup">Free Download</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="careersContent">
-                                                    <div class="thumb">
+                                            <div className="item">
+                                                <div className="careersContent">
+                                                    <div className="thumb">
                                                         <img src="assets/images/innerpage-img/sample-img/samp1.png" alt="" />
                                                     </div>
-                                                    <div class="sampletext">
+                                                    <div className="sampletext">
                                                         <h5><a href="">JEE Main 2021 March 17 question paper...</a></h5>
-                                                        <p class="breif"><i class="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
-                                                        <div class="dowloads ebook-download-button">
-                                                            <a href="" class="button btn-primary popup">Free Download</a>
+                                                        <p className="breif"><i className="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
+                                                        <div className="dowloads ebook-download-button">
+                                                            <a href="" className="button btn-primary popup">Free Download</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="careersContent">
-                                                    <div class="thumb">
+                                            <div className="item">
+                                                <div className="careersContent">
+                                                    <div className="thumb">
                                                         <img src="assets/images/innerpage-img/sample-img/samp1.png" alt="" />
                                                     </div>
-                                                    <div class="sampletext">
+                                                    <div className="sampletext">
                                                         <h5><a href="">JEE Main 2021 March 17 question paper...</a></h5>
-                                                        <p class="breif"><i class="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
-                                                        <div class="dowloads ebook-download-button">
-                                                            <a href="" class="button btn-primary popup">Free Download</a>
+                                                        <p className="breif"><i className="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
+                                                        <div className="dowloads ebook-download-button">
+                                                            <a href="" className="button btn-primary popup">Free Download</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="careersContent">
-                                                    <div class="thumb">
+                                            <div className="item">
+                                                <div className="careersContent">
+                                                    <div className="thumb">
                                                         <img src="assets/images/innerpage-img/sample-img/samp1.png" alt="" />
                                                     </div>
-                                                    <div class="sampletext">
+                                                    <div className="sampletext">
                                                         <h5><a href="">JEE Main 2021 March 17 question paper...</a></h5>
-                                                        <p class="breif"><i class="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
-                                                        <div class="dowloads ebook-download-button">
-                                                            <a href="" class="button btn-primary popup">Free Download</a>
+                                                        <p className="breif"><i className="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
+                                                        <div className="dowloads ebook-download-button">
+                                                            <a href="" className="button btn-primary popup">Free Download</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="careersContent">
-                                                    <div class="thumb">
+                                            <div className="item">
+                                                <div className="careersContent">
+                                                    <div className="thumb">
                                                         <img src="assets/images/innerpage-img/sample-img/samp1.png" alt="" />
                                                     </div>
-                                                    <div class="sampletext">
+                                                    <div className="sampletext">
                                                         <h5><a href="">JEE Main 2021 March 17 question paper...</a></h5>
-                                                        <p class="breif"><i class="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
-                                                        <div class="dowloads ebook-download-button">
-                                                            <a href="" class="button btn-primary popup">Free Download</a>
+                                                        <p className="breif"><i className="fa fa-download" aria-hidden="true"></i> 73+ Downloads</p>
+                                                        <div className="dowloads ebook-download-button">
+                                                            <a href="" className="button btn-primary popup">Free Download</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -489,9 +489,9 @@ const ExamList = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="AdmitCard">
+                                <div className="AdmitCard">
                                     <h1>Student Appearing Vs Seat Available</h1>
-                                    <table class="table table-bordered">
+                                    <table className="table table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>Year</th>
@@ -515,13 +515,13 @@ const ExamList = () => {
                                     </table>
                                 </div>
 
-                                <div class="AdmitCard" id="preparation">
+                                <div className="AdmitCard" id="preparation">
                                     <h1>CMAT 2021 Preparation Tips</h1>
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
 
                                         <p>Since the examination is approaching, the candidates must check the CMAT 2021 preparation tips, important books, and topics that can improve study preparation of CMAT 2021. Before starting the exam preparation, it is important to go through the syllabus and exam pattern thoroughly. A proper CMAT 2021 planning and regular preparation needed to crack the Common Management Admission Test. Candidates who are appearing for the exam can also check the best books to prepare for CMAT 2021.<span id="dots3">...</span></p>
 
-                                        <div class="hiddenContent" id="more3">
+                                        <div className="hiddenContent" id="more3">
                                             <strong>Also Read:</strong>
                                             <ul>
                                                 <li>How to Prepare for CMAT 2021?</li>
@@ -529,9 +529,9 @@ const ExamList = () => {
                                                 <li>How to prepare for the GK section of CMAT, IIFT, and XAT 2021</li>
                                                 <li>CMAT 2021: Last Week Tips to Ace the Test</li>
                                             </ul>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <b>Best books for Comprehension, Vocabulary, and Grammar (CMAT 2021)</b>
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Name of the book</th>
@@ -582,9 +582,9 @@ const ExamList = () => {
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <b>Books on Data Interpretation and Logical Reasoning (CMAT 2021)</b>
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Book Name</th>
@@ -606,20 +606,20 @@ const ExamList = () => {
 
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContentTwo()" id="myBtn3" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContentTwo()" id="myBtn3" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard" id="pattern">
+                                <div className="AdmitCard" id="pattern">
                                     <h1>CMAT 2021 Exam Pattern</h1>
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
 
                                         <p>National Testing Agency (NTA) has introduced a new section in CMAT 2021. Students interested in Innovation and Entrepreneurship programmes can now opt for this new section in addition to the regular sections in CMAT exam. Know details of the CMAT exam pattern below.
                                             <span id="dots4">...</span></p>
 
-                                        <div class="hiddenContent" id="more4">
+                                        <div className="hiddenContent" id="more4">
 
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <b>CMAT Exam Pattern 2021</b>
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Particulars</th>
@@ -667,9 +667,9 @@ const ExamList = () => {
 
                                                 </tbody>
                                             </table>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <b>Section Wise CMAT 2021 Exam Pattern</b>
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Sections</th>
@@ -716,9 +716,9 @@ const ExamList = () => {
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <b>CMAT Previous Year Question Papers</b>
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Year</th>
@@ -748,11 +748,11 @@ const ExamList = () => {
 
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContentThree()" id="myBtn4" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContentThree()" id="myBtn4" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard" id="answer">
+                                <div className="AdmitCard" id="answer">
                                     <h1>CMAT 2021 Answer Key</h1>
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
 
                                         <p>
                                             National Testing Agency has conduct the CMAT on March 31 in CBT mode. Once the CMAT exam concluded, the authority will release the provisional answer key of the Common Management Aptitude Test i.e. CMAT 2021 answer key tentatively in the first week of April 2021. The answer key of CMAT 2021 will be released in the form of a response sheet in online mode.
@@ -761,10 +761,10 @@ const ExamList = () => {
                                             Candidates will be able to challenge the CMAT 2021 answer key within the prescribed date by paying the required fee (Non-Refundable). After the answer key challenge window closed, authorities will release the final answer key of CMAT 2021 in the second week of April 2021 along with the CMAT 2021 result. Candidates will be able to download the answer key of CMAT 2021 by entering their login credentials which will be created at the time of registration.
                                             <span id="dots11">...</span></p>
 
-                                        <div class="hiddenContent" id="more11">
+                                        <div className="hiddenContent" id="more11">
 
                                             <b>CMAT Answer Key</b>
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Year</th>
@@ -794,18 +794,18 @@ const ExamList = () => {
                                             </table>
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContentten()" id="myBtn11" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContentten()" id="myBtn11" className="float-right">Read more</a>
                                 </div>
 
-                                <div class="AdmitCard" id="result">
+                                <div className="AdmitCard" id="result">
                                     <h1>CMAT 2021 Result</h1>
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
 
                                         <p>
                                             The National Testing Agency (NTA) will release the result of CMAT at cmat.nta.nic.in. To check result of CMAT 2021 and download the scorecard, candidates must enter their ID and Password. Admissions to institutes accepting CMAT scores are on the basis of the scores obtained in CMAT 2021.
                                             <span id="dots6">...</span></p>
 
-                                        <div class="hiddenContent" id="more6">
+                                        <div className="hiddenContent" id="more6">
                                             <strong>How to Check CMAT Result 2021</strong>
                                             <span>The result of CMAT will be checked by following the steps as under,</span>
                                             <ul>
@@ -816,7 +816,7 @@ const ExamList = () => {
                                                 <li>The screen will display the CMAT 2021 scorecard.</li>
                                                 <li>Save it as a PDF file for future use.</li>
                                             </ul>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <strong>Details mentioned in CMAT 2021 Scorecard</strong>
                                             <ul>
                                                 <li>Candidate's Roll number</li>
@@ -825,16 +825,16 @@ const ExamList = () => {
                                                 <li>CMAT percentile score </li>
                                                 <li>All India Rank</li>
                                             </ul>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <strong>Also Read:</strong>
                                             <ul>
                                                 <li>CMAT Score Vs Percentile</li>
                                                 <li>Top B-schools Accepting CMAT Scores</li>
                                                 <li>Know Previous Year's CMAT Topper List</li>
                                             </ul>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <b>CMAT Toppers List - Previous Year's</b>
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Rank</th>
@@ -874,17 +874,17 @@ const ExamList = () => {
                                             </table>
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContentFive()" id="myBtn6" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContentFive()" id="myBtn6" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard" id="cutoff">
+                                <div className="AdmitCard" id="cutoff">
                                     <h1>CMAT 2021 Cutoff</h1>
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
 
                                         <p>
                                             National Testing Agency will not release CMAT cutoff to shortlist candidates for the selection procedure; however, the affiliated institutes will declare their respective CMAT cutoff 2021 after the result gets officially announced. The cutoff of CMAT 2021 is the minimum score or percentile candidates need to obtain for attaining admission into MBA and PGDM courses offered by management institutes across India.
                                             <span id="dots7">...</span></p>
 
-                                        <div class="hiddenContent" id="more7">
+                                        <div className="hiddenContent" id="more7">
                                             <strong>The factors that will determine the CMAT 2021 cutoff are-</strong>
                                             <ul>
                                                 <li>Total number of candidates appeared in the exam</li>
@@ -892,9 +892,9 @@ const ExamList = () => {
                                                 <li>Number of qualified candidates</li>
                                                 <li>Level of difficulty pertaining to exam</li>
                                             </ul>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <b>CMAT Accepting Colleges with their cut off</b>
-                                            <table class="table table-bordered">
+                                            <table className="table table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Institute Name</th>
@@ -931,11 +931,11 @@ const ExamList = () => {
                                             </table>
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContentSix()" id="myBtn7" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContentSix()" id="myBtn7" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard">
+                                <div className="AdmitCard">
                                     <h1>CMAT 2021 Selection Process</h1>
-                                    <div class="viewMoreContent">
+                                    <div className="viewMoreContent">
 
                                         <p>
                                             All India Council for Technical Education (AICTE) approved institutes will conduct the
@@ -945,7 +945,7 @@ const ExamList = () => {
                                             The selection procedure of CMAT 2021 mostly comprised of GD (Group Discussion),
                                             PI (Personal Interview) or WAT (Written Ability Test).<span id="dots8">...</span></p>
 
-                                        <div class="hiddenContent" id="more8">
+                                        <div className="hiddenContent" id="more8">
                                             <strong>CMAT 2021 Selection Process</strong>
                                             <p>The CMAT Selection Process 2021 has four main stages,</p>
 
@@ -1019,9 +1019,9 @@ const ExamList = () => {
 
                                                 <li>Sydenham Institute of Management Studies Research and Entrepreneurship Education (SIMSREE), Mumbai</li>
                                             </ul>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                             <strong>MBA colleges accepting CMAT score</strong>
-                                            <table class="table">
+                                            <table className="table">
 
                                                 <tbody>
 
@@ -1045,13 +1045,13 @@ const ExamList = () => {
                                             </table>
                                         </div>
                                     </div>
-                                    <a href="javascript:;" onclick="readMoreContentSeven()" id="myBtn8" class="float-right">Read more</a>
+                                    <a href="javascript:;" onclick="readMoreContentSeven()" id="myBtn8" className="float-right">Read more</a>
                                 </div>
-                                <div class="AdmitCard">
+                                <div className="AdmitCard">
                                     <h1>Documents Required at Counselling</h1>
-                                    <ul class="syllabusList">
-                                        <li>Class 10 or Secondary exam mark sheets and certificates</li>
-                                        <li>Class 12 or Higher Secondary exam mark sheets and certificates</li>
+                                    <ul className="syllabusList">
+                                        <li>className 10 or Secondary exam mark sheets and certificates</li>
+                                        <li>className 12 or Higher Secondary exam mark sheets and certificates</li>
                                         <li>CMAT 2021 admit card</li>
                                         <li>Any professional degree certificate, if any</li>
                                         <li>Work experience certificate, if any</li>
@@ -1059,54 +1059,54 @@ const ExamList = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-3 zero-left">
-                                <div class="ExamRight">
+                            <div className="col-md-3 zero-left">
+                                <div className="ExamRight">
                                     <h1>MBA/PGDM Admissions2021 OPEN</h1>
-                                    <div class="content">
-                                        <div class="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
-                                        <div class="contText">
-                                            <strong class="textWid">UPES Dehradun | MBA Admission...</strong>
-                                            <a href="javascript:;" class="button2">Apply</a>
+                                    <div className="content">
+                                        <div className="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
+                                        <div className="contText">
+                                            <strong className="textWid">UPES Dehradun | MBA Admission...</strong>
+                                            <a href="javascript:;" className="button2">Apply</a>
                                             <p>92% Placements | 1st Indian University to be awarded QS 5 Stars Rating for Employability</p>
                                         </div>
                                     </div>
-                                    <div class="content">
-                                        <div class="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
-                                        <div class="contText">
-                                            <strong class="textWid">UPES Dehradun | MBA Admission...</strong>
-                                            <a href="javascript:;" class="button2">Apply</a>
+                                    <div className="content">
+                                        <div className="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
+                                        <div className="contText">
+                                            <strong className="textWid">UPES Dehradun | MBA Admission...</strong>
+                                            <a href="javascript:;" className="button2">Apply</a>
                                             <p>92% Placements | 1st Indian University to be awarded QS 5 Stars Rating for Employability</p>
                                         </div>
                                     </div>
-                                    <div class="content">
-                                        <div class="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
-                                        <div class="contText">
-                                            <strong class="textWid">UPES Dehradun | MBA Admission...</strong>
-                                            <a href="javascript:;" class="button2">Apply</a>
+                                    <div className="content">
+                                        <div className="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
+                                        <div className="contText">
+                                            <strong className="textWid">UPES Dehradun | MBA Admission...</strong>
+                                            <a href="javascript:;" className="button2">Apply</a>
                                             <p>92% Placements | 1st Indian University to be awarded QS 5 Stars Rating for Employability</p>
                                         </div>
                                     </div>
-                                    <div class="content">
-                                        <div class="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
-                                        <div class="contText">
-                                            <strong class="textWid">UPES Dehradun | MBA Admission...</strong>
-                                            <a href="javascript:;" class="button2">Apply</a>
+                                    <div className="content">
+                                        <div className="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
+                                        <div className="contText">
+                                            <strong className="textWid">UPES Dehradun | MBA Admission...</strong>
+                                            <a href="javascript:;" className="button2">Apply</a>
                                             <p>92% Placements | 1st Indian University to be awarded QS 5 Stars Rating for Employability</p>
                                         </div>
                                     </div>
-                                    <div class="content">
-                                        <div class="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
-                                        <div class="contText">
-                                            <strong class="textWid">UPES Dehradun | MBA Admission...</strong>
-                                            <a href="javascript:;" class="button2">Apply</a>
+                                    <div className="content">
+                                        <div className="contImage"><img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" /></div>
+                                        <div className="contText">
+                                            <strong className="textWid">UPES Dehradun | MBA Admission...</strong>
+                                            <a href="javascript:;" className="button2">Apply</a>
                                             <p>92% Placements | 1st Indian University to be awarded QS 5 Stars Rating for Employability</p>
                                         </div>
                                     </div>
-                                    <a href="javascript:;" class="viewAll">View All Application Forms</a>
+                                    <a href="javascript:;" className="viewAll">View All Application Forms</a>
                                 </div>
-                                <div class="ExamRight">
+                                <div className="ExamRight">
                                     <h1>CMAT Updates and Notifications</h1>
-                                    <ul class="rightNoti">
+                                    <ul className="rightNoti">
                                         <li>
                                             <a href="javascript:;">CMAT 2021 Exam Over: Answer key and CMAT Result soon at cmat.nta.nic.in</a>
                                         </li>
@@ -1132,17 +1132,17 @@ const ExamList = () => {
                                             <a href="javascript:;">CMAT 2021 Exam Over: Answer key and CMAT Result soon at cmat.nta.nic.in</a>
                                         </li>
                                     </ul>
-                                    <a href="javascript:;" class="viewAll">View All Notifications Forms</a>
+                                    <a href="javascript:;" className="viewAll">View All Notifications Forms</a>
                                 </div>
-                                <div class="ExamRight">
+                                <div className="ExamRight">
                                     <h1>Trending Articles around CMAT</h1>
-                                    <ul class="righArti">
+                                    <ul className="righArti">
                                         <li>
                                             <a href="javascript:;">
-                                                <div class="leftImg">
+                                                <div className="leftImg">
                                                     <img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" />
                                                 </div>
-                                                <div class="rightCont">
+                                                <div className="rightCont">
                                                     <b>MAT Result 2021 (Anytime Soon) - Get Scorecard for February 2021 (IBT/PBT/CBT)</b>
                                                     <small>1 day ago</small>
                                                 </div>
@@ -1150,10 +1150,10 @@ const ExamList = () => {
                                         </li>
                                         <li>
                                             <a href="javascript:;">
-                                                <div class="leftImg">
+                                                <div className="leftImg">
                                                     <img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" />
                                                 </div>
-                                                <div class="rightCont">
+                                                <div className="rightCont">
                                                     <b>MAT Result 2021 (Anytime Soon) - Get Scorecard for February 2021 (IBT/PBT/CBT)</b>
                                                     <small>1 day ago</small>
                                                 </div>
@@ -1161,10 +1161,10 @@ const ExamList = () => {
                                         </li>
                                         <li>
                                             <a href="javascript:;">
-                                                <div class="leftImg">
+                                                <div className="leftImg">
                                                     <img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" />
                                                 </div>
-                                                <div class="rightCont">
+                                                <div className="rightCont">
                                                     <b>MAT Result 2021 (Anytime Soon) - Get Scorecard for February 2021 (IBT/PBT/CBT)</b>
                                                     <small>1 day ago</small>
                                                 </div>
@@ -1172,10 +1172,10 @@ const ExamList = () => {
                                         </li>
                                         <li>
                                             <a href="javascript:;">
-                                                <div class="leftImg">
+                                                <div className="leftImg">
                                                     <img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" />
                                                 </div>
-                                                <div class="rightCont">
+                                                <div className="rightCont">
                                                     <b>MAT Result 2021 (Anytime Soon) - Get Scorecard for February 2021 (IBT/PBT/CBT)</b>
                                                     <small>1 day ago</small>
                                                 </div>
@@ -1183,17 +1183,17 @@ const ExamList = () => {
                                         </li>
                                         <li>
                                             <a href="javascript:;">
-                                                <div class="leftImg">
+                                                <div className="leftImg">
                                                     <img src="assets/images/innerpage-img/institute-logo/ins1.png" alt="" />
                                                 </div>
-                                                <div class="rightCont">
+                                                <div className="rightCont">
                                                     <b>MAT Result 2021 (Anytime Soon) - Get Scorecard for February 2021 (IBT/PBT/CBT)</b>
                                                     <small>1 day ago</small>
                                                 </div>
                                             </a>
                                         </li>
                                     </ul>
-                                    <a href="javascript:;" class="viewAll">View All Articles Forms</a>
+                                    <a href="javascript:;" className="viewAll">View All Articles Forms</a>
                                 </div>
 
                             </div>
@@ -1201,7 +1201,7 @@ const ExamList = () => {
                     </div>
                 </section>
 
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
 
 
                 {/* <!-- ALL JS FILES -->

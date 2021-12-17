@@ -3,99 +3,94 @@ import Loader from '../../../Loader/Loader';
 import { useAlert } from 'react-alert'
 import { Table } from 'react-bootstrap';
 import Header from '../../../Header'
+
 const tableData = {
     color: "#000"
 }
 
 
 const ResultPage6To9 = () => {
-    // const history = useHistory();
-    const [data, setData] = useState([])
-    const [showGradeData, setShowGradeData] = useState([])
-    const [showindustry, setShowindustry] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [title, setTitle] = useState()
-    const alert = useAlert()
-
-
-    useEffect(() => {
-        getCarrer()
-        GradeData()
-        getIndustry()
-        getTitle()
-    }, [])
-
-    const getTitle = () => {
+        const [data, setData] = useState([])
+        const [showGradeData, setShowGradeData] = useState([])
+        const [showindustry, setShowindustry] = useState([])
+        const [loading, setLoading] = useState(true)
+        const [title, setTitle] = useState()
+        const alert = useAlert()
         let user = JSON.parse(localStorage.getItem('user-details'));
-        setLoading(true)
-        fetch(`${process.env.REACT_APP_API_URL}/api/6th/title/`, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${user && user.access}`
-            },
-        }).then((result) => {
-            result.json().then((resp) => {
-                setLoading(false)
-                setTitle(resp[0])
+    
+    
+        useEffect(() => {
+            getCarrer()
+            GradeData()
+            getIndustry()
+            getTitle()
+        }, [])
+    
+        const getTitle = () => {
+            setLoading(true)
+            fetch(`${process.env.REACT_APP_API_URL}/api/6th/title/`, {
+                method: "GET",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${user && user.access}`
+                },
+            }).then((result) => {
+                result.json().then((resp) => {
+                    setLoading(false)
+                    setTitle(resp[0])
+                })
             })
-        })
-    }
-
-    const getCarrer = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        setLoading(true)
-        fetch(`${process.env.REACT_APP_API_URL}/api/6th/result`, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${user && user.access}`
-            },
-        }).then((result) => {
-            result.json().then((resp) => {
-                setLoading(false)
-                setData(resp.data)
-                if (result.status !== 200) {
-                    alert.error(resp.detail)
-                }
+        }
+    
+        const getCarrer = () => {
+            fetch(`${process.env.REACT_APP_API_URL}/api/6th/result`, {
+                method: "GET",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${user && user.access}`
+                },
+            }).then((result) => {
+                result.json().then((resp) => {
+                    setLoading(false)
+                    setData(resp.data)
+                    if (result.status !== 200) {
+                        alert.error(resp.detail)
+                    }
+                })
             })
-        })
-    }
-
-    const GradeData = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        fetch(`${process.env.REACT_APP_API_URL}/api/6th/showgrade/`, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${user && user.access}`
-            },
-        }).then((result) => {
-            result.json().then((resp) => {
-                setShowGradeData(resp)
+        }
+    
+        const GradeData = () => {
+            fetch(`${process.env.REACT_APP_API_URL}/api/6th/showgrade/`, {
+                method: "GET",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${user && user.access}`
+                },
+            }).then((result) => {
+                result.json().then((resp) => {
+                    setShowGradeData(resp)
+                })
             })
-        })
-    }
-
-    const getIndustry = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        fetch(`${process.env.REACT_APP_API_URL}/api/6th/showindusty/`, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${user && user.access}`
-            },
-        }).then((result) => {
-            result.json().then((resp) => {
-                setShowindustry(resp)
+        }
+        const getIndustry = () => {
+            fetch(`${process.env.REACT_APP_API_URL}/api/6th/showindusty/`, {
+                method: "GET",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${user && user.access}`
+                },
+            }).then((result) => {
+                result.json().then((resp) => {
+                    setShowindustry(resp)
+                })
             })
-        })
-    }
-
+        }
+    
 
     return (
         <Fragment>
@@ -119,9 +114,7 @@ const ResultPage6To9 = () => {
                                         <tr>
                                             <th>Career Clusters</th>
                                             <th>Score</th>
-                                            {/* <th>Maximum Marks</th> */}
                                             <th>Grade</th>
-                                            {/* <th>Time</th> */}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -130,7 +123,6 @@ const ResultPage6To9 = () => {
                                                 <tr>
                                                     <td>{e.industry}</td>
                                                     <td>{e.totalCount}</td>
-                                                    {/* <td>17</td> */}
                                                     <td>{e.grade}</td>
                                                 </tr>
                                             )}
@@ -142,9 +134,9 @@ const ResultPage6To9 = () => {
                     <div className="center mb-5">
                         <div className="mx-5 w-75">
                             <h2>Key to Grades</h2>
-                            <table class="table text-left border text-center">
+                            <table className="table text-left border text-center">
                                 <thead>
-                                    <tr class="score_card">
+                                    <tr className="score_card">
                                         <th scope="col">Area</th>
                                         <th scope="col">High Score</th>
                                     </tr>
@@ -154,9 +146,9 @@ const ResultPage6To9 = () => {
                                     {
                                         showGradeData.map((e) =>
                                             <tr>
-                                                <td>{e.grade}</td>
-                                                <td>{e.score}</td>
-
+                                            <td>{e.grade}</td>
+                                            <td>{e.score}</td>
+                                                
                                             </tr>
 
                                         )
@@ -176,7 +168,6 @@ const ResultPage6To9 = () => {
                                         showindustry.map((e) =>
                                             <tr >
                                                 <td style={{ padding: "7px", borderTop: "1px solid #000" }}>{e.industry_Id}. {e.industry}</td>
-                                                {/* <td style={{ borderTop: "1px solid #000" }} className="pl-3">9. Hospitality & Tourism</td> */}
                                             </tr>
                                         )
                                     }
@@ -194,7 +185,7 @@ const ResultPage6To9 = () => {
 
                                 {
                                     data.map((e) =>
-                                        <table class="table text-left border">
+                                        <table className="table text-left border">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">{e.industry_Grade}</th>
@@ -203,7 +194,7 @@ const ResultPage6To9 = () => {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
+                                            <tr>
                                                     <td></td>
                                                     <td style={{ border: "1px solid #000" }} ><b>Score:</b> <br />Your Assessment score in
                                                         {e.industry}  {e.totalCount}
@@ -230,7 +221,6 @@ const ResultPage6To9 = () => {
 
                                                     </td>
                                                     <td >
-                                                        {/* <img className="ml-5 pl-5" src="./assets/images/pyramid.png" /> */}
                                                         <div className="d-flex ">
                                                             {
                                                                 e.grade === "Below Average" ?
@@ -299,7 +289,7 @@ const ResultPage6To9 = () => {
                                                                     <>
                                                                     </>
                                                             }
-
+                                                  
                                                         </div>
 
                                                         <br />

@@ -1,13 +1,8 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { Chart as ChartJS, registerables } from 'chart.js'
-import Chart from 'chart.js/auto'
 
 import {Bar} from 'react-chartjs-2';
-const Barchar = ({Industry}) => {
-    const [label,setLabel] = useState()
-    
-  
-    console.log(Industry)
+const Barchar = ({Industry}) => {  
     ChartJS.register(...registerables)
     const state = {
         labels: [Industry],

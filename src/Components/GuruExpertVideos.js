@@ -13,13 +13,13 @@ const GuruExpertVideos = () => {
 
                 {/* margin-top_7 */}
 
-                <section class="guruVideosList ActingList ">
-                    <div class="container">
-                        <div class="row justify-content-md-center">
-                            <div class="col-md-7">
+                <section className="guruVideosList ActingList ">
+                    <div className="container">
+                        <div className="row justify-content-md-center">
+                            <div className="col-md-7">
                                 <img src="assets/images/videosimage/ad.png" width="100%" />
                             </div>
-                            <div class="col-md-5">
+                            <div className="col-md-5">
                                 <img src="assets/images/videosimage/ad2.jpg" width="100%" />
                             </div>
                         </div>
@@ -28,222 +28,121 @@ const GuruExpertVideos = () => {
 
 
 
-                <section class="guruVideosList ActingList">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="InnerLeft ">
-                                    <div class="asideNav">
+                <section className="guruVideosList ActingList">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-3">
+                                <div className="InnerLeft ">
+                                    <div className="asideNav">
                                         <a href="javascript:;">
-                                            <div class="form-group has-search">
-                                                <span class="fa fa-search form-control-feedback"></span>
-                                                <input type="text" class="form-control" placeholder="Search College, Exam, career, videos and more" />
+                                            <div className="form-group has-search">
+                                                <span className="fa fa-search form-control-feedback"></span>
+                                                <input type="text" className="form-control" placeholder="Search College, Exam, career, videos and more" />
                                             </div>
                                         </a>
-                                        <a href="javascript:;"><i class="fa fa-list" aria-hidden="true"></i> All Videos</a>
-                                        <a href="javascript:;"><i class="fa fa-paper-plane" aria-hidden="true"></i> Latest</a>
-                                        <a href="javascript:;"><i class="fa fa-bolt" aria-hidden="true"></i> Trending</a>
-                                        <a href="javascript:;"><i class="fa fa-briefcase" aria-hidden="true"></i> Careers</a>
-                                        <a href="javascript:;"><i class="fa fa-sun-o" aria-hidden="true"></i> Well Being</a>
-                                        <a href="javascript:;"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> My List</a>
-                                        <a href="javascript:;"><span class="btnList" style={{ width: "100%" }}><i class="fa fa-bookmark-o" aria-hidden="true"></i> Featured Articles</span></a>
+                                        <a href="javascript:;"><i className="fa fa-list" aria-hidden="true"></i> All Videos</a>
+                                        <a href="javascript:;"><i className="fa fa-paper-plane" aria-hidden="true"></i> Latest</a>
+                                        <a href="javascript:;"><i className="fa fa-bolt" aria-hidden="true"></i> Trending</a>
+                                        <a href="javascript:;"><i className="fa fa-briefcase" aria-hidden="true"></i> Careers</a>
+                                        <a href="javascript:;"><i className="fa fa-sun-o" aria-hidden="true"></i> Well Being</a>
+                                        <a href="javascript:;"><i className="fa fa-sticky-note-o" aria-hidden="true"></i> My List</a>
+                                        <a href="javascript:;"><span className="btnList" style={{ width: "100%" }}><i className="fa fa-bookmark-o" aria-hidden="true"></i> Featured Articles</span></a>
 
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-9 zero-left">
-                                <div class="VideoList">
-                                    <h3 class="heading"><span>All Videos</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
-                                    <div class="VideosBox">
-                                        <div id="owl-carousel-guruVideo" class="career owl-carousel owl-theme">
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                            <div className="col-md-9 zero-left">
+                                <div className="VideoList">
+                                    <h3 className="heading"><span>All Videos</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
+                                    <div className="VideosBox">
+                                        <div id="owl-carousel-guruVideo" className="career owl-carousel owl-theme">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="VideoList">
-                                    <h3 class="heading"><span>Latest</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
-                                    <div class="VideosBox">
-                                        <div id="owl-carousel-latest" class="career owl-carousel owl-theme">
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
@@ -254,198 +153,97 @@ const GuruExpertVideos = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="VideoList">
-                                    <h3 class="heading"><span>Tranding</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
-                                    <div class="VideosBox">
-                                        <div id="owl-carousel-guruthree" class="career owl-carousel owl-theme">
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                <div className="VideoList">
+                                    <h3 className="heading"><span>Latest</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
+                                    <div className="VideosBox">
+                                        <div id="owl-carousel-latest" className="career owl-carousel owl-theme">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="VideoList">
-                                    <h3 class="heading"><span>Careers</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
-                                    <div class="VideosBox">
-                                        <div id="owl-carousel-gurufour" class="career owl-carousel owl-theme">
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
-                                                <!--</div>--> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
-                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="videoText">
-                                                        <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
@@ -456,97 +254,299 @@ const GuruExpertVideos = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="VideoList">
-                                    <h3 class="heading"><span>Well Being</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
-                                    <div class="VideosBox">
-                                        <div id="owl-carousel-gurufive" class="career owl-carousel owl-theme">
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                <div className="VideoList">
+                                    <h3 className="heading"><span>Tranding</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
+                                    <div className="VideosBox">
+                                        <div id="owl-carousel-guruthree" className="career owl-carousel owl-theme">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <div class="videoContent">
-                                                    <div class="guruVideo">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
                                                         <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                                                     </div>
-                                                    <div class="videoText">
+                                                    <div className="videoText">
                                                         <h5><a href="javascript:;">Law College in India</a></h5>
-                                                        {/* <!--<div class="dowloads ebook-download-button">-->
-                                                <!--    <a href="javascript:;" class="button btn-primary popup"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="VideoList">
+                                    <h3 className="heading"><span>Careers</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
+                                    <div className="VideosBox">
+                                        <div id="owl-carousel-gurufour" className="career owl-carousel owl-theme">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="VideoList">
+                                    <h3 className="heading"><span>Well Being</span> <a href="javascript:;" target="_blank">VIEW ALL</a></h3>
+                                    <div className="VideosBox">
+                                        <div id="owl-carousel-gurufive" className="career owl-carousel owl-theme">
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
+                                                <!--</div>--> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="item">
+                                                <div className="videoContent">
+                                                    <div className="guruVideo">
+                                                        <iframe src="https://player.vimeo.com/video/531707463" width="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div className="videoText">
+                                                        <h5><a href="javascript:;">Law College in India</a></h5>
+                                                        {/* <!--<div className="dowloads ebook-download-button">-->
+                                                <!--    <a href="javascript:;" className="button btn-primary popup"><i className="fa fa-download" aria-hidden="true"></i> Free Download</a>-->
                                                 <!--</div>--> */}
                                                     </div>
                                                 </div>
@@ -567,7 +567,7 @@ const GuruExpertVideos = () => {
 
                 {/* <!-- end section --> */}
 
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
 
 
 

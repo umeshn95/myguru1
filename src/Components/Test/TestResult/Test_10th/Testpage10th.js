@@ -6,7 +6,6 @@ import { useHistory } from 'react-router-dom'
 import Header from '../../../Header'
 import NewTimer from '../../../../NewTimer'
 
-import env from 'react-dotenv'
 
 const Testpage10th = () => {
     const alert = useAlert()
@@ -16,12 +15,7 @@ const Testpage10th = () => {
     const [dataExam, setDataExam] = useState([])
     const [count, setCount] = useState(1)
     const [dataTemp, setDataTemp] = useState([])
-    // console.log('count', count)
-    // console.log('data', dataTemp.count)
-
-
     let user = JSON.parse(localStorage.getItem('user-details'));
-    // const userName = user.username;
 
     const [ans1, setAns1] = useState(0)
     const [ans2, setAns2] = useState(0)
@@ -46,11 +40,7 @@ const Testpage10th = () => {
     }
 
     const sendDataResult = (industry, question, id) => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
         let item = { id, industry, question, ans1, ans2, ans3, ans4, ans5 }
-        // console.log(id)
-        setLoading(true)
-        // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/10th/testresult", {
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/testresult`, {
             method: "POST",
             headers: {
@@ -60,20 +50,14 @@ const Testpage10th = () => {
             },
             body: JSON.stringify(item)
         }).then((result) => {
-            // console.log("Result", result.status)
             result.json().then((resp) => {
-                // console.log(resp)
                 setLoading(false)
             })
         })
     }
 
-    //
     const findRightAns = (id, value) => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
         let item = { id, value }
-        // console.log(id)
-        // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/10th/findans/", {
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/findans/`, {
             method: "POST",
             headers: {
@@ -83,17 +67,13 @@ const Testpage10th = () => {
             },
             body: JSON.stringify(item)
         }).then((result) => {
-            // console.log("Result", result)
             result.json().then((resp) => {
-                // console.log(resp)
                 setFindStatus(resp.status)
             })
         })
     }
 
     const getAns = () => {
-        setLoading(true)
-        // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/10th/question", {
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/question`, {
             method: "GET",
             headers: {
@@ -101,9 +81,7 @@ const Testpage10th = () => {
                 "Content-Type": "application/json",
             },
         }).then((result) => {
-            // console.log("Result", result.status)
             result.json().then((resp) => {
-                // console.log(resp)
                 setData(resp.results)
                 setDataTemp(resp)
                 setLoading(false)
@@ -115,10 +93,6 @@ const Testpage10th = () => {
     }
 
     const getData = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        // const token = user.access;
-        setLoading(true)
-        // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/10th/studentquestion", {
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/studentquestion`, {
             method: "GET",
             headers: {
@@ -127,9 +101,7 @@ const Testpage10th = () => {
                 "Authorization": `Bearer ${user && user.access}`
             },
         }).then((result) => {
-            // console.log("Result", result.status)
             result.json().then((resp) => {
-                // console.log(resp)
                 setDataExam(resp.data)
                 setLoading(false)
                 if (result.status !== 200) {
@@ -140,10 +112,6 @@ const Testpage10th = () => {
     }
 
     const deleteData = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        // const token = user.access;
-        setLoading(true)
-        // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/10th/deleteresult", {
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/deleteresult`, {
             method: "GET",
             headers: {
@@ -152,9 +120,7 @@ const Testpage10th = () => {
                 "Authorization": `Bearer ${user && user.access}`
             },
         }).then((result) => {
-            // console.log("Result", result.status)
             result.json().then((resp) => {
-                console.log('resp', resp)
                 setLoading(false)
             })
         })
@@ -171,8 +137,6 @@ const Testpage10th = () => {
         setFindStatus("")
         var k = count + pk
         setCount(k)
-        setLoading(true)
-        // fetch(`https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/10th/question?page=${k}`, {
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/question?page=${k}`, {
             method: "GET",
             headers: {
@@ -180,14 +144,12 @@ const Testpage10th = () => {
                 "Content-Type": "application/json",
             },
         }).then((result) => {
-            // console.log("Result", result.status)
             if (result.status === 404) {
                 setLoading(false)
                 history.push('/10th/result')
                 return alert.success("Your Task is completed ")
             }
             result.json().then((resp) => {
-                // console.log(resp)
                 setData(resp.results)
                 setDataTemp(resp)
                 setLoading(false)
@@ -289,14 +251,14 @@ const Testpage10th = () => {
                                                                 {
                                                                     findStatus === 200 ?
                                                                         <>
-                                                                            <div class="alert alert-success" role="alert">
+                                                                            <div className="alert alert-success" role="alert">
                                                                                  {`Right Answer this => ${curAns}`}
                                                                             </div>
                                                                         </>
                                                                         :
                                                                         findStatus === 400 ?
                                                                         <>
-                                                                            <div class="alert alert-danger" role="alert">
+                                                                            <div className="alert alert-danger" role="alert">
                                                                             {`Opps Wrong Answer this => ${curAns}`}
                                                                             </div>
                                                                         </>

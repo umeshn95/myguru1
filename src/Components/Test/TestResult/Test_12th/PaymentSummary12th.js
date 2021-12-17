@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
 import Header from '../../../Header'
 
-const PaymentSummary = () => {
+const PaymentSummary12th = () => {
 
     //------------------------------------- Hooks & Variable ------------------------------------------------//
     const alert = useAlert()
@@ -23,11 +23,10 @@ const PaymentSummary = () => {
         setLoading(false)
     }, [])
 
-    //------------------------------------- Logout Function ------------------------------------------------//
 
     //------------------------------------- getData from student Function ------------------------------------------------//
     const getData = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/api/studentquestion`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/12th/studentquestion`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -101,7 +100,7 @@ const PaymentSummary = () => {
                                                 </>
                                                 :
                                                 <>
-                                                    <Link to="/paymentconfirm"><button className="pay_btn float-right mr-5">Pay</button></Link>
+                                                    <Link to="/12th/paymentconfirm"><button className="pay_btn float-right mr-5">Pay</button></Link>
                                                 </>
                                         }
                                     </div>
@@ -115,4 +114,4 @@ const PaymentSummary = () => {
     )
 }
 
-export default PaymentSummary
+export default PaymentSummary12th

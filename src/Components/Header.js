@@ -3,12 +3,10 @@ import { Link, useHistory } from 'react-router-dom';
 import React, { useState, useEffect } from 'react'
 import Loader from './Loader/Loader';
 import { useAlert } from 'react-alert'
-// import process.env.R from 'react-dotprocess.env.R'
 
 const Header = () => {
     const history = useHistory();
     const [data, setData] = useState([])
-    // console.log(data)
     const [loading, setLoading] = useState(true)
     const alert = useAlert()
     function logout() {
@@ -22,34 +20,29 @@ const Header = () => {
     }, [])
 
     const getCarrer = () => {
-        try {
-            setLoading(true)
-            fetch(`${process.env.R.API_URL}/api/carrer`, {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json",
-                },
-            }).then((result) => {
-                // console.log("Result", result.status)
-                result.json().then((resp) => {
-                    // console.log(resp)
-                    setData(resp.data)
-                    setLoading(false)
-                    if (result.status !== 200) {
-                        alert.error(resp.detail)
-                    }
-                })
+        fetch(`${process.env.R.API_URL}/api/carrer`, {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+        }).then((result) => {
+            result.json().then((resp) => {
+                setData(resp.data)
+                setLoading(false)
+                if (result.status !== 200) {
+                    alert.error(resp.detail)
+                }
             })
+        })
 
-        } catch (err) {
-        }
     }
 
     if (loading) {
         return <Loader />
     }
-   return (
+
+    return (
 
         <div>
             {/* <!-- Start header --> */}
@@ -157,7 +150,7 @@ const Header = () => {
                                     <div className="search-box">
                                         <input type="text" className="search-txt" placeholder="Search" />
                                         <a className="search-btn">
-                                            
+
                                         </a>
                                     </div>
                                 </li>

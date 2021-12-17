@@ -5,9 +5,7 @@ import '../../../css/custom.css'
 import { useAlert } from 'react-alert'
 import Loader from '../../../Loader/Loader'
 import React, { useEffect, useState } from "react"
-import { useHistory, Link } from 'react-router-dom'
 import Header from '../../../Header'
-import env from 'react-dotenv'
 
 const PaymentSummary7th = () => {
 
@@ -15,12 +13,9 @@ const PaymentSummary7th = () => {
     const alert = useAlert()
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState([])
-
     const [count, setCount] = useState([])
-    // console.log('count',data)
-    // console.log('count', count)
     let user = JSON.parse(localStorage.getItem('user-details'));
-console.log(process.env.REACT_APP_API_URL)
+
     //------------------------------------- Use Effect ------------------------------------------------//
     useEffect(() => {
         getData()
@@ -28,15 +23,10 @@ console.log(process.env.REACT_APP_API_URL)
     }, [])
 
     //------------------------------------- Logout Function ------------------------------------------------//
-    const history = useHistory();
 
     //------------------------------------- getData from student Function ------------------------------------------------//
     const getData = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        // const token = user.access;
-        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/studentquestion`, {
-        // fetch("https://myguruonline.herokuapp.com/api/7th/studentquestion", {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -44,9 +34,7 @@ console.log(process.env.REACT_APP_API_URL)
                 "Authorization": `Bearer ${user && user.access}`
             },
         }).then((result) => {
-            // console.log("Result", result.status)
             result.json().then((resp) => {
-                // console.log(resp)
                 setData(resp.data)
                 setCount(resp.count)
                 setLoading(false)
@@ -66,11 +54,6 @@ console.log(process.env.REACT_APP_API_URL)
     return (
         <div>
             <Header />
-            <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
-                {/* <!-- Start header --> */}
-
-                {/* <!-- End header --> */}
-                {/* <!-- Welcome My Guru section  --> */}
                 <div className="section margin-top_7">
                     <div className="container-fluid">
                         <div className="row">
@@ -129,30 +112,6 @@ console.log(process.env.REACT_APP_API_URL)
                 </div>
                 {/* <!-- end section --> */}
 
-
-
-
-                {/* <!-- Start Footer --> 
-
-                <a href="#" id="scroll-to-top" className="hvr-radial-out"><i className="fa fa-angle-up"></i></a>
-                {/* <!-- ALL JS FILES --> */}
-                <script src="assets/js/jquery.min.js"></script>
-                <script src="assets/js/popper.min.js"></script>
-                <script src="assets/js/bootstrap.min.js"></script>
-                <script src="assets/owlcarousel1/jquery.min.js"></script>
-                <script src="assets/owlcarousel1/owl.carousel.min.js"></script>
-                {/* <!-- ALL PLUGINS --> */}
-                <script src="assets/js/jquery.magnific-popup.min.js"></script>
-                <script src="assets/js/jquery.pogo-slider.min.js"></script>
-                <script src="assets/js/slider-index.js"></script>
-                <script src="assets/js/smoothscroll.js"></script>
-                <script src="assets/js/form-validator.min.js"></script>
-                <script src="assets/js/contact-form-script.js"></script>
-                <script src="assets/js/isotope.min.js"></script>
-                <script src="assets/js/images-loded.min.js"></script>
-                <script src="assets/js/custom.js"></script>
-                <script src="assets/js/main.js"></script>
-            </body>
         </div>
     )
 }
