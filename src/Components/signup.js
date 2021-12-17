@@ -1,4 +1,3 @@
-import { Dropdown } from 'react-bootstrap'
 import './css/bootstrap.min.css'
 import './css/pogo-slider.min.css'
 import './css/style.css'

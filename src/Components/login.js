@@ -27,7 +27,6 @@ console.log(process.env)
   const login = () => {
     let item = { username, password};
     setLoading(true);
-    // fetch("https://myguruonline.herokuapp.com/api/account/login/", {
     fetch(`${process.env.REACT_APP_API_URL}/api/account/login/`, {
       method: "POST",
       headers: {

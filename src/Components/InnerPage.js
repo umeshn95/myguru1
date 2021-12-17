@@ -1,4 +1,3 @@
-import { Dropdown } from 'react-bootstrap'
 import './css/bootstrap.min.css'
 import './css/pogo-slider.min.css'
 import './css/style.css'
@@ -30,7 +29,6 @@ const InnerPage = (props) => {
 //============================================== Get Collage Data like Images ============================================//
     const getCarrer = () => {
         setLoading(true)
-        // fetch(`https://myguruonline.herokuapp.com${process.env.R.API_URL}/api/courses/${props.match.params.id}/`, {
         fetch(`${process.env.R.API_URL}/api/courses/${props.match.params.id}/`, {
             method: "GET",
             headers: {
@@ -74,8 +72,8 @@ return (
                 <div class="row">
 
                     <div class="bannerImg">
-                        {/* <img src={"https://myguruonline.herokuapp.com" + data.bannerImage} alt="" width="90" /> */}
-                        <img src={data.bannerImage} alt="" width="90" />
+                        {/* <img src= {"https://myguruonline.herokuapp.com" + data.bannerImage} alt="" width="90" /> */}
+                        <img src= {process.env.R.API_URL + data.bannerImage} alt="" width="90" />
                     </div>
 
                 </div>

@@ -19,7 +19,7 @@ import VocationalImages from './Components/VocationalImages';
 import ResultPage from './Components/Test/TestResult/Test_11th/ResultPage'
 import PageNotFound from './Components/PageNotFound';
 
-// 11 th
+// 11 
 import test from './Components/test';
 import PaymentSummary from './Components/Test/TestResult/Test_11th/PaymentSummary';
 import PaymentConfirm from './Components/Test/TestResult/Test_11th/PaymentConfirm';
