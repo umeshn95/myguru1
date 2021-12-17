@@ -94,14 +94,14 @@ const Signup = () => {
                 {/* <!-- Popular Programs section --> */}
 
 
-                <div class="section layout_padding Login margn-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="loginform">
-                                    <div class="text">Signup</div>
-                                    <div class="field"> <i class="fa fa-user"></i> <input type="text" placeholder="Name" required value={name} onChange={(e) => setName(e.target.value)} /></div>
-                                    <div class="field"> <i class="fa fa-user"></i>
+                <div className="section layout_padding Login margn-top">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <div className="loginform">
+                                    <div className="text">Signup</div>
+                                    <div className="field"> <i className="fa fa-user"></i> <input type="text" placeholder="Name" required value={name} onChange={(e) => setName(e.target.value)} /></div>
+                                    <div className="field"> <i className="fa fa-user"></i>
                                         <select name="profile" id="profile" required value={campus} onChange={(e) => setCampus(e.target.value)}>
                                             <option value="select" selected>Select User Profile</option>
                                             <option value="student">Student</option>
@@ -110,42 +110,42 @@ const Signup = () => {
                                             <option value="admin">Admin</option>
                                         </select>
                                     </div>
-                                    <div class="field"> <i class="fa fa-process.env.Relope-o"></i> <input type="text" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} /> </div>
-                                    {/* <div class="field"> <i class="fa fa-key"></i> <input type="text" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)}/></div> */}
+                                    <div className="field"> <i className="fa fa-process.env.Relope-o"></i> <input type="text" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} /> </div>
+                                    {/* <div className="field"> <i className="fa fa-key"></i> <input type="text" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)}/></div> */}
                                     {
                                         passwordShown ?
                                             <>
-                                                <div class="field"> <i className="fa fa-key"></i> <div class='eyeIcon2'><i className="fa fa-eye" onClick={togglePassword}></i></div> <input type={passwordShown ? "text" : "password"} placeholder="Password" value={password} required onChange={(e) => setPassword(e.target.value)} /> </div>
+                                                <div className="field"> <i classNameName="fa fa-key"></i> <div className='eyeIcon2'><i classNameName="fa fa-eye" onClick={togglePassword}></i></div> <input type={passwordShown ? "text" : "password"} placeholder="Password" value={password} required onChange={(e) => setPassword(e.target.value)} /> </div>
                                             </>
                                             :
                                             <>
-                                                <div class="field"> <i className="fa fa-key"></i> <div class='eyeIcon2'><i className="fa fa-eye-slash" onClick={togglePassword}></i></div> <input type={passwordShown ? "text" : "password"} placeholder="Password" value={password} required onChange={(e) => setPassword(e.target.value)} /> </div>
+                                                <div className="field"> <i classNameName="fa fa-key"></i> <div className='eyeIcon2'><i classNameName="fa fa-eye-slash" onClick={togglePassword}></i></div> <input type={passwordShown ? "text" : "password"} placeholder="Password" value={password} required onChange={(e) => setPassword(e.target.value)} /> </div>
                                             </>
                                     }
                                     {
                                         passwordShown2 ?
                                             <>
-                                                <div class="field"> <i className="fa fa-key"></i> <div class='eyeIcon2'><i className="fa fa-eye" onClick={togglePassword2}></i></div> <input type={passwordShown2 ? "text" : "password"} placeholder="Re-Enter Password" value={confirmPassword} required onChange={(e) => setConfirmPassword(e.target.value)} /> </div>
+                                                <div className="field"> <i classNameName="fa fa-key"></i> <div className='eyeIcon2'><i classNameName="fa fa-eye" onClick={togglePassword2}></i></div> <input type={passwordShown2 ? "text" : "password"} placeholder="Re-Enter Password" value={confirmPassword} required onChange={(e) => setConfirmPassword(e.target.value)} /> </div>
                                             </>
                                             :
                                             <>
-                                                <div class="field"> <i className="fa fa-key"></i> <div class='eyeIcon2'><i className="fa fa-eye-slash" onClick={togglePassword2}></i></div> <input type={passwordShown2 ? "text" : "password"} placeholder="Re-Enter Password" value={confirmPassword} required onChange={(e) => setConfirmPassword(e.target.value)} /> </div>
+                                                <div className="field"> <i classNameName="fa fa-key"></i> <div className='eyeIcon2'><i classNameName="fa fa-eye-slash" onClick={togglePassword2}></i></div> <input type={passwordShown2 ? "text" : "password"} placeholder="Re-Enter Password" value={confirmPassword} required onChange={(e) => setConfirmPassword(e.target.value)} /> </div>
                                             </>
                                     }
 
-                                    {/* <div class="field"> <i class="fa fa-key"></i> <input type="text" placeholder="Re-Enter Password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} /></div> */}
+                                    {/* <div className="field"> <i className="fa fa-key"></i> <input type="text" placeholder="Re-Enter Password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} /></div> */}
 
-                                    <button class="login_btn" onClick={register}>Signup</button>
-                                    <Link to='/login'><a class="float-left">Already Register? Login Now</a></Link>
-                                    <a href="javascript:;" class="float-right">Forgot Password?</a>
-                                    <div class="clearfix"></div>
-                                    <div class="social-buttons">
+                                    <button className="login_btn" onClick={register}>Signup</button>
+                                    <Link to='/login'><a className="float-left">Already Register? Login Now</a></Link>
+                                    <a href="javascript:;" className="float-right">Forgot Password?</a>
+                                    <div className="clearfix"></div>
+                                    <div className="social-buttons">
                                         <b>Or You can Signup with</b>
-                                        <button class="neo-button"><i class="fa fa-facebook fa-1x"></i> </button>
-                                        <button class="neo-button"><i class="fa fa-linkedin fa-1x"></i></button>
-                                        <button class="neo-button"><i class="fa fa-google fa-1x"></i> </button>
-                                        <button class="neo-button"><i class="fa fa-youtube fa-1x"></i> </button>
-                                        <button class="neo-button"><i class="fa fa-twitter fa-1x"></i> </button>
+                                        <button className="neo-button"><i className="fa fa-facebook fa-1x"></i> </button>
+                                        <button className="neo-button"><i className="fa fa-linkedin fa-1x"></i></button>
+                                        <button className="neo-button"><i className="fa fa-google fa-1x"></i> </button>
+                                        <button className="neo-button"><i className="fa fa-youtube fa-1x"></i> </button>
+                                        <button className="neo-button"><i className="fa fa-twitter fa-1x"></i> </button>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@ const Signup = () => {
                 </div>
                 {/* <!-- end section --> */}
 
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
             </body>
         </div>
 

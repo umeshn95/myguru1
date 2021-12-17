@@ -70,7 +70,7 @@ console.log(process.env)
       >
         {/* <!-- LOADER --> */}
         {/* <div id="preloader">
-                    <div class="loader">
+                    <div className="loader">
                         <img src="assets/images/loader.gif" alt="#" />
                     </div>
                 </div> */}
@@ -80,11 +80,11 @@ console.log(process.env)
 <!-- Start header --> */}
 
         {/* <!-- End header --> */}
-        <section class="inner_banner margin-top_7">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="full">
+        <section className="inner_banner margin-top_7">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="full">
                   <h3>Login/Signup</h3>
                 </div>
               </div>
@@ -94,13 +94,13 @@ console.log(process.env)
         {/* <!-- Popular Programs section --> */}
 
         {/* <!-- margin-top_50 --> */}
-        <div class="section layout_padding Login">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-7">
-                <div class="why_us_login">
-                  <div class="text">Benefits of Registration with us:-</div>
-                  <div class="why_us_login_inner">
+        <div className="section layout_padding Login">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-7">
+                <div className="why_us_login">
+                  <div className="text">Benefits of Registration with us:-</div>
+                  <div className="why_us_login_inner">
                     <ul>
                       <li>Manage your Orders</li>
                       <li>Manage your Tests easily</li>
@@ -116,37 +116,37 @@ console.log(process.env)
                     </ul>
                     <button
                       type="button"
-                      class="btn btn-info mt-3"
+                      className="btn btn-info mt-3"
                       onclick="window.location.href='about-us.html';"
                     >
                       Learn More
                     </button>
                   </div>
-                  <p class="mt-3 mb-1">
+                  <p className="mt-3 mb-1">
                     <b>For more details you can contact us at:-</b>
                   </p>
-                  <ul class="login_contact">
+                  <ul className="login_contact">
                     <li>
-                      <i class="fa fa-map-marker"></i>
+                      <i className="fa fa-map-marker"></i>
                       <span>ABC, Laxmi Nagar, New Delhi-110001. India</span>
                     </li>
                     <li>
-                      <i class="fa fa-process.env.Relope"></i>
+                      <i className="fa fa-process.env.Relope"></i>
                       <span>info@gmail.com</span>
                     </li>
                     <li>
-                      <i class="fa fa-phone"></i>
+                      <i className="fa fa-phone"></i>
                       <span>+91-9876543210</span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-md-5">
-                <div class="loginform">
-                  <div class="text">Login</div>
-                  <div class="field">
+              <div className="col-md-5">
+                <div className="loginform">
+                  <div className="text">Login</div>
+                  <div className="field">
                     {" "}
-                    <i class="fa fa-user"></i>
+                    <i className="fa fa-user"></i>
                     <select name="profile" id="profile">
                       <option value="select" selected>
                         Select User Profile
@@ -161,9 +161,9 @@ console.log(process.env)
                       <option value="editor">Editor</option>
                     </select>
                   </div>
-                  <div class="field">
+                  <div className="field">
                     {" "}
-                    <i className="fa fa-process.env.Relope-o"></i>
+                    <i classNameName="fa fa-process.env.Relope-o"></i>
                     <input
                       type="text"
                       placeholder="Email & Username"
@@ -174,11 +174,11 @@ console.log(process.env)
                   </div>
                   {passwordShown ? (
                     <>
-                      <div class="field">
+                      <div className="field">
                         {" "}
-                        <i className="fa fa-key"></i>{" "}
-                        <div class="eyeIcon">
-                          <i className="fa fa-eye" onClick={togglePassword}></i>
+                        <i classNameName="fa fa-key"></i>{" "}
+                        <div className="eyeIcon">
+                          <i classNameName="fa fa-eye" onClick={togglePassword}></i>
                         </div>{" "}
                         <input
                           type={passwordShown ? "text" : "password"}
@@ -191,12 +191,12 @@ console.log(process.env)
                     </>
                   ) : (
                     <>
-                      <div class="field">
+                      <div className="field">
                         {" "}
-                        <i className="fa fa-key"></i>{" "}
-                        <div class="eyeIcon">
+                        <i classNameName="fa fa-key"></i>{" "}
+                        <div className="eyeIcon">
                           <i
-                            className="fa fa-eye-slash"
+                            classNameName="fa fa-eye-slash"
                             onClick={togglePassword}
                           ></i>
                         </div>{" "}
@@ -211,32 +211,32 @@ console.log(process.env)
                     </>
                   )}
                   {/* <button onClick={togglePassword}>Show Password</button> */}
-                  <button class="login_btn" onClick={login}>
+                  <button className="login_btn" onClick={login}>
                     Login
                   </button>
-                  <Link to="/signup" class="float-left">
+                  <Link to="/signup" className="float-left">
                     Not Register? Signup Now
                   </Link>
-                  <a href="javascript:;" class="float-right">
+                  <a href="javascript:;" className="float-right">
                     Forgot Password?
                   </a>
-                  <div class="clearfix"></div>
-                  <div class="social-buttons">
+                  <div className="clearfix"></div>
+                  <div className="social-buttons">
                     <b>Or You can Login with</b>
-                    <button class="neo-button">
-                      <i class="fa fa-facebook fa-1x"></i>{" "}
+                    <button className="neo-button">
+                      <i className="fa fa-facebook fa-1x"></i>{" "}
                     </button>
-                    <button class="neo-button">
-                      <i class="fa fa-linkedin fa-1x"></i>
+                    <button className="neo-button">
+                      <i className="fa fa-linkedin fa-1x"></i>
                     </button>
-                    <button class="neo-button">
-                      <i class="fa fa-google fa-1x"></i>{" "}
+                    <button className="neo-button">
+                      <i className="fa fa-google fa-1x"></i>{" "}
                     </button>
-                    <button class="neo-button">
-                      <i class="fa fa-youtube fa-1x"></i>{" "}
+                    <button className="neo-button">
+                      <i className="fa fa-youtube fa-1x"></i>{" "}
                     </button>
-                    <button class="neo-button">
-                      <i class="fa fa-twitter fa-1x"></i>{" "}
+                    <button className="neo-button">
+                      <i className="fa fa-twitter fa-1x"></i>{" "}
                     </button>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ console.log(process.env)
 
         {/* <!-- end section --> */}
 
-        <div class="clearfix"></div>
+        <div className="clearfix"></div>
       </body>
     </div>
   );

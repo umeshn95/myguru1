@@ -12,7 +12,7 @@ const tableData = {
 }
 
 
-const ResultPage10th = () => {
+const ResultPage12th = () => {
     const [data, setData] = useState([])
     const [title, setTitle] = useState()
     const [loading, setLoading] = useState(true)
@@ -29,7 +29,7 @@ const ResultPage10th = () => {
     }, [])
 
     const getTitle = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/api/10th/title/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/12th/title/`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -45,7 +45,7 @@ const ResultPage10th = () => {
     }
 
     const getCarrer = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/api/8th/result`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/12th/result`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -64,7 +64,7 @@ const ResultPage10th = () => {
     }
 
     const GradeData = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/api/8th/showgrade/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/12th/showgrade/`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -77,9 +77,9 @@ const ResultPage10th = () => {
             })
         })
     }
-
+    
     const getIndustry = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/api/8th/showindusty/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/12th/showindusty/`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -105,10 +105,10 @@ const ResultPage10th = () => {
                         <div style={{ marginTop: "100px" }} className='mb-5 w-75'>
                             <div className="center mb-5">
                                 <div className=' w-lg-50 w-sm-100'>
-                                    <h2 style={{ border: "1px solid #000", borderRadius: "10px", background: "#41B5F8" }} className='p-3'><strong>APTITUDE TEST AND INTEREST INVENTORY</strong></h2>
+                                    <h2 style={{ border: "1px solid #000", borderRadius: "10px", background: "#41B5F8" }} className='p-3'><strong>EMOTIONAL INTELLIGENCE</strong></h2>
                                 </div>
                             </div>
-                            <h3><b>IMPORTANCE OF APTITUDE TEST</b></h3>
+                            <h3><b>EMOTIONAL INTELLIGENCE – WHAT, WHY & HOW</b></h3>
                             <div className='text-start'>
                                 <h6 className='text-start d-inline' style={{ letterSpacing: "0.1rem", fontSize: "16px", textDecoration: "underline" }}><b>Aptitude Testing</b></h6> <small style={{ color: "#000", fontSize: "14px" }}>{title && title.TitleImportance}</small>
                                 <h6 className='text-start mb-5'><strong>The most important turning point of your life comes after class X and that is your choice of stream in which you would further pursue your career. In this report your stream preference is aligned in order of First to Fourth preference.</strong></h6>
@@ -165,22 +165,6 @@ const ResultPage10th = () => {
                                     }
                                 </tbody>
                             </table>
-                            <h3 className='mt-5'><strong><u>General Information about various Abilities:</u></strong></h3>
-                            <div className='text-start'>
-                                <h6 className='text-start d-inline' style={{ letterSpacing: "0.1rem", fontSize: "16px" }}><strong><u>(A) Verbal Ability (VA)</u></strong></h6> <small style={{ color: "#000", fontSize: "14px" }}>{title && title.VerbalAbility}</small>
-                            </div>
-                            <div className='text-start'>
-                                <h6 className='text-start d-inline' style={{ letterSpacing: "0.1rem", fontSize: "16px", textDecoration: "underline" }}><strong>(B) Numerical Ability (NA)</strong></h6> <small style={{ color: "#000", fontSize: "14px" }}>{title && title.NumericalAbility}</small>
-                            </div>
-                            <div className='text-start'>
-                                <h6 className='text-start d-inline' style={{ letterSpacing: "0.1rem", fontSize: "16px", textDecoration: "underline" }}><strong>(C) Abstract Reasoning (AR)</strong></h6> <small style={{ color: "#000", fontSize: "14px" }}>{title && title.AbstractReasoning}</small>
-                            </div>
-                            <div className='text-start'>
-                                <h6 className='text-start d-inline' style={{ letterSpacing: "0.1rem", fontSize: "16px", textDecoration: "underline" }}><strong>(D) Logical Reasoning Ability (LRA)</strong></h6> <small style={{ color: "#000", fontSize: "14px" }}>{title && title.LogicalReasoningAbility}</small>
-                            </div>
-                            <div className='text-start'>
-                                <h6 className='text-start d-inline' style={{ letterSpacing: "0.1rem", fontSize: "16px", textDecoration: "underline" }}><strong>(E) Mechanical Ability (MA) </strong></h6> <small style={{ color: "#000", fontSize: "14px" }}>{title && title.MechanicalAbility}</small>
-                            </div>
                         </div>
                     </div>
                     <hr />
@@ -240,8 +224,9 @@ const ResultPage10th = () => {
                                                         </ul>
                                                     </td>
                                                     <td >
+                                                        {/* <img className="ml-5 pl-5" src="./assets/images/pyramid.png" /> */}
                                                         <div className="d-flex ">
-                                                            {
+                                                            {/* {
                                                                 e.grade === "Below Average" ?
                                                                     <>
                                                                         <div className='text-center'>
@@ -269,30 +254,25 @@ const ResultPage10th = () => {
                                                                     :
                                                                     <>
                                                                     </>
-                                                            }
+                                                            } */}
                                                             {
-                                                                e.grade === "Hige" ?
+                                                                e.grade === "Development" ?
                                                                     <>
                                                                         <div className='text-center'>
-                                                                            <small>{showGradeData[3] && showGradeData[3].score}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Below Average</small>
-                                                                        </div>
-                                                                        <div className='text-center'>
                                                                         <small>{showGradeData[2] && showGradeData[2].score}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Average</small>
+                                                                            <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
+                                                                            <small>Development</small>
+                                                                            <small className='d-flex center text-danger'>{e.totalCount}</small>
                                                                         </div>
                                                                         <div className='text-center'>
                                                                         <small>{showGradeData[1] && showGradeData[1].score}</small>
-                                                                            <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Hign</small>
-                                                                            <small className='d-flex center text-danger'>{e.totalCount}</small>
+                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
+                                                                            <small>Requires</small>
                                                                         </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[0] && showGradeData[0].score}</small>
                                                                             <div className="arrow-up4 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Excellent</small>
+                                                                            <small>	Strengh</small>
                                                                         </div>
                                                                     </>
                                                                     :
@@ -300,56 +280,47 @@ const ResultPage10th = () => {
                                                                     </>
                                                             }
                                                             {
-                                                                e.grade === "Average" ?
+                                                                e.grade === "Requires" ?
                                                                     <>
                                                                         <div className='text-center'>
-                                                                            <small>{showGradeData[3] && showGradeData[3].score}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Below Average</small>
-                                                                        </div>
-                                                                        <div className='text-center'>
                                                                             <small>{showGradeData[2] && showGradeData[2].score}</small>
-                                                                            <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Average</small>
-                                                                            <small className='d-flex center text-danger'>{e.totalCount}</small>
+                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
+                                                                            <small>Development</small>
                                                                         </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[1] && showGradeData[1].score}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Hign</small>
+                                                                            <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
+                                                                            <small>Requires</small>
+                                                                            <small className='d-flex center text-danger'>{e.totalCount}</small>
                                                                         </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[0] && showGradeData[0].score}</small>
-                                                                            <div className="arrow-up4 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Excellent</small>
+                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
+                                                                            <small>Strengh</small>
                                                                         </div>
+                         
                                                                     </>
                                                                     :
                                                                     <>
                                                                     </>
                                                             }
                                                             {
-                                                                e.grade === "Excellent" ?
+                                                                e.grade === "Strengh" ?
                                                                     <>
-                                                                        <div className='text-center'>
-                                                                            <small>{showGradeData[3] && showGradeData[3].grade}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Below Average</small>
-                                                                        </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[2] && showGradeData[2].grade}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Average</small>
+                                                                            <small>Development</small>
                                                                         </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[1] && showGradeData[1].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Hign</small>
+                                                                            <small>Requires</small>
                                                                         </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[0] && showGradeData[0].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Excellent</small>
+                                                                            <small>Strengh</small>
                                                                             <small className='d-flex center text-danger'>{e.totalCount}</small>
                                                                         </div>
                                                                     </>
@@ -376,4 +347,4 @@ const ResultPage10th = () => {
     )
 }
 
-export default ResultPage10th
+export default ResultPage12th

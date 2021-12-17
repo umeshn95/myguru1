@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../../../Header'
-
-const Assessment6To9 = () => {
+const Assessment12th = () => {
     return (
         <div>
             <Header />
-            {/* <!-- Welcome My Guru section  --> */}
             <div className="section margin-top_7">
                 <div className="container-fluid">
                     <div className="row">
@@ -21,7 +19,7 @@ const Assessment6To9 = () => {
                                     <div className=" ">
                                         <h1 className="text-center mt-3 gray">Please read the instructions carefully</h1>
                                         <p className="text-start mt-3 fw-bold ml-4">Instructions for students</p>
-                                        <div classNameName="row">
+                                        <div className="row">
                                             <p className="ml-3 fs-6 col-lg-8">1. Required Version of safe browser Dignissimos in sequi omnis inventore provident fugit. Fuga unde libero maxime quas doloribus est itaque quos similique, quo, voluptates quaerat, nisi laborum.</p>
                                             <p className="ml-3 fs-6 col-lg-8">1. Required Version of safe browser Dignissimos in sequi omnis inventore provident fugit. Fuga unde libero maxime quas doloribus est itaque quos similique, quo, voluptates quaerat, nisi laborum.</p>
                                             <p className="ml-3 fs-6 col-lg-8">1. Required Version of safe browser Dignissimos in sequi omnis inventore provident fugit. Fuga unde libero maxime quas doloribus est itaque quos similique, quo, voluptates quaerat, nisi laborum.</p>
@@ -29,7 +27,7 @@ const Assessment6To9 = () => {
                                             <p className="ml-3 fs-6 col-lg-8">1. Required Version of safe browser Dignissimos in sequi omnis inventore provident fugit. Fuga unde libero maxime quas doloribus est itaque quos similique, quo, voluptates quaerat, nisi laborum.</p>
                                             <p className="ml-3 fs-6 col-lg-8">1. Required Version of safe browser Dignissimos in sequi omnis inventore provident fugit. Fuga unde libero maxime quas doloribus est itaque quos similique, quo, voluptates quaerat, nisi laborum.</p>
                                             <div className="d-flex justify-content-center">
-                                                <Link to='/8th/testpage'><a><button className="pay_btn3 ">Proceed to Test</button></a></Link>
+                                                <Link to='/12th/testpage'><a><button className="pay_btn3 ">Proceed to Test</button></a></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -43,4 +41,4 @@ const Assessment6To9 = () => {
     )
 }
 
-export default Assessment6To9
+export default Assessment12th

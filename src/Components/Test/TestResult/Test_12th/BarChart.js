@@ -11,7 +11,10 @@ import { Animation } from '@devexpress/dx-react-chart';
 import Header from '../../../Header';
 
 
+
+
 const ChartMain = ({data}) => {
+
     return (
         <Fragment>
             <Header />

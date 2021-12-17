@@ -6,11 +6,10 @@ import '../../../css/custom.css'
 import Header from '../../../Header'
 import { Link } from 'react-router-dom'
 
-const PaymentConfirm6To9 = () => {
+const PaymentConfirm12th = () => {
     return (
         <div>
             <Header />
-            {/* <!-- Welcome My Guru section  --> */}
             <div className="section margin-top_7">
                 <div className="container-fluid">
                     <div className="row">
@@ -26,7 +25,7 @@ const PaymentConfirm6To9 = () => {
                                         <i className="fas fa-check-circle check_circle mt-3"></i>
                                         <h1 className="text-start mt-3 text-center text-light">Payment Confirmed</h1>
                                         <h1 className="text-start mt-3 fw-bold text-light text-center w-75">We have sent you an email with all the details of your order with order no. xxxxxxxxxx</h1>
-                                        <Link to='/8th/paymentconfirm'><a><button className="btn proceed_test">Proceed to test</button></a></Link>
+                                        <Link to='/12th/paymentassessment'><a><button className="btn proceed_test">Proceed to test</button></a></Link>
                                     </div>
 
                                 </div>
@@ -48,4 +47,4 @@ const PaymentConfirm6To9 = () => {
     )
 }
 
-export default PaymentConfirm6To9
+export default PaymentConfirm12th

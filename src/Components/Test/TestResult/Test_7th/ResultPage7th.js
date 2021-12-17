@@ -1,19 +1,10 @@
-import React, { useHistory, useState, useEffect, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import Loader from '../../../Loader/Loader';
 import { useAlert } from 'react-alert'
 import { Table } from 'react-bootstrap';
 import Header from '../../../Header'
 import BarChar from './Barchar'
 import PieChar from './PieChar'
-import {
-    Chart,
-    PieSeries,
-    Title,
-} from '@devexpress/dx-react-chart-material-ui';
-import { Animation } from '@devexpress/dx-react-chart';
-import Paper from '@material-ui/core/Paper';
-import './PieChart.css'
-import env from 'react-dotenv'
 
 const tableData = {
     color: "#000"
@@ -21,13 +12,12 @@ const tableData = {
 
 
 const ResultPage7th = () => {
-    // const history = useHistory();
     const [data, setData] = useState([])
     const [showGradeData, setShowGradeData] = useState([])
     const [showindustry, setShowindustry] = useState([])
     const [loading, setLoading] = useState(true)
     const [title, setTitle] = useState()
-    
+    let user = JSON.parse(localStorage.getItem('user-details'));
     const alert = useAlert()
 
 
@@ -40,10 +30,7 @@ const ResultPage7th = () => {
 
 
     const getTitle = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/title/`, {
-            // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/10th/result", {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -52,8 +39,6 @@ const ResultPage7th = () => {
             },
         }).then((result) => {
             result.json().then((resp) => {
-                // console.log(result)
-                // console.log(resp)
                 setLoading(false)
                 setTitle(resp[0])
             })
@@ -62,9 +47,6 @@ const ResultPage7th = () => {
 
 
     const getCarrer = async () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        setLoading(true)
-        // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/7th/result", {
         await fetch(`${process.env.REACT_APP_API_URL}/api/7th/result`, {
             method: "GET",
             headers: {
@@ -73,10 +55,7 @@ const ResultPage7th = () => {
                 "Authorization": `Bearer ${user && user.access}`
             },
         }).then((result) => {
-            // console.log("Result", result.status)
             result.json().then((resp) => {
-                // console.log(result)
-                // console.log(resp.data)
                 setLoading(false)
                 setData(resp.data)
                 if (result.status !== 200) {
@@ -87,8 +66,6 @@ const ResultPage7th = () => {
     }
 
     const GradeData = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
-        // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/7th/showgrade/", {
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/showgrade/`, {
             method: "GET",
             headers: {
@@ -98,15 +75,13 @@ const ResultPage7th = () => {
             },
         }).then((result) => {
             result.json().then((resp) => {
-                // console.log(resp)
                 setShowGradeData(resp)
             })
         })
     }
+
     const getIndustry = () => {
-        let user = JSON.parse(localStorage.getItem('user-details'));
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/showindusty/`, {
-            // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/7th/showindusty/", {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -115,12 +90,10 @@ const ResultPage7th = () => {
             },
         }).then((result) => {
             result.json().then((resp) => {
-                // console.log(resp)
                 setShowindustry(resp)
             })
         })
     }
-    console.log(showindustry)
 
     return (
         <Fragment>
@@ -154,9 +127,7 @@ const ResultPage7th = () => {
                                         <tr>
                                             <th>Career Clusters</th>
                                             <th>Score</th>
-                                            {/* <th>Maximum Marks</th> */}
                                             <th>Grade</th>
-                                            {/* <th>Time</th> */}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -165,7 +136,6 @@ const ResultPage7th = () => {
                                                 <tr>
                                                     <td>{e.industry}</td>
                                                     <td>{e.totalCount}</td>
-                                                    {/* <td>17</td> */}
                                                     <td>{e.grade}</td>
                                                 </tr>
                                             )}
@@ -213,7 +183,6 @@ const ResultPage7th = () => {
                                         showindustry.map((e) =>
                                             <tr >
                                                 <td style={{ padding: "7px", borderTop: "1px solid #000" }}>{e.industry_Id}. {e.industry}</td>
-                                                {/* <td style={{ borderTop: "1px solid #000" }} className="pl-3">9. Hospitality & Tourism</td> */}
                                             </tr>
                                         )
                                     }
@@ -223,7 +192,6 @@ const ResultPage7th = () => {
                         </div>
                     </div>
                     <hr />
-                    {/* Aptitude Test Analysis */}
                     <div>
                         <div className="center mb-5">
                             <div className="mx-5 w-75">
@@ -263,7 +231,6 @@ const ResultPage7th = () => {
                                                             </div>
                                                     </td>
                                                     <td >
-                                                        {/* <img className="ml-5 pl-5" src="./assets/images/pyramid.png" /> */}
                                                         <div className="d-flex ">
                                                             {
                                                                 e.grade === "Below Average" ?
