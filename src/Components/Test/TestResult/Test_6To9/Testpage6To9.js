@@ -23,10 +23,11 @@ const Testpage6To9 = () => {
   const [ans5, setAns5] = useState(0);
 
   useEffect(() => {
-    getAns();
-    getData();
-    deleteData();
-  }, []);
+    getAns()
+    getData()
+    deleteData()
+}, [])
+
 
   const submit = (e, industry, question, id) => {
     pagination(e);

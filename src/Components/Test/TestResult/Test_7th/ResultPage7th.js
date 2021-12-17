@@ -3,7 +3,7 @@ import Loader from '../../../Loader/Loader';
 import { useAlert } from 'react-alert'
 import { Table } from 'react-bootstrap';
 import Header from '../../../Header'
-import BarChar from './Barchar'
+import BarChart from './BarChart'
 import PieChar from './PieChar'
 
 const tableData = {
@@ -172,7 +172,7 @@ const ResultPage7th = () => {
                     </div>
                     <hr />
                     <div className='center'>
-                        <BarChar Industry={showindustry} />
+                        <BarChart data={data && data} />
                     </div>
                     <div className="center mt-5">
                         <div className=" mx-5 w-75">

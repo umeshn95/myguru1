@@ -124,9 +124,7 @@ const ResultPage8th = () => {
                                         <tr>
                                             <th>Career Clusters</th>
                                             <th>Score</th>
-                                            {/* <th>Maximum Marks</th> */}
                                             <th>Grade</th>
-                                            {/* <th>Time</th> */}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -135,8 +133,26 @@ const ResultPage8th = () => {
                                                 <tr>
                                                     <td>{e.industry}</td>
                                                     <td>{e.totalCount}</td>
-                                                    {/* <td>17</td> */}
                                                     <td>{e.grade}</td>
+                                                    <td>{e.grade}</td>
+                                                </tr>
+                                            )}
+                                    </tbody>
+
+                                    <thead>
+                                        <tr>
+                                            <th>Total</th>
+                                            <th>Score</th>
+                                            <th>Maximum Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            data.map((e) =>
+                                                <tr>
+                                                    <td>Total</td>
+                                                    <td>{e.ind_1}</td>
+                                                    <td>60</td>
                                                 </tr>
                                             )}
                                     </tbody>
