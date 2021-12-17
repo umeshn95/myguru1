@@ -10,29 +10,24 @@ import InnerPage from './Components/InnerPage';
 import login from './Components/login';
 import myGuruHome from './Components/myGuruHome';
 import signup from './Components/signup';
-import header from './Components/Header';
-import footer from './Components/Footer';
-import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Prodected from './Prodected'
 import VocationalImages from './Components/VocationalImages';
 import ResultPage from './Components/Test/TestResult/Test_11th/ResultPage'
 import PageNotFound from './Components/PageNotFound';
 
-// 11 
+// 11 th
 import test from './Components/test';
 import PaymentSummary from './Components/Test/TestResult/Test_11th/PaymentSummary';
 import PaymentConfirm from './Components/Test/TestResult/Test_11th/PaymentConfirm';
 import Assessment from './Components/Test/TestResult/Test_11th/Assessment';
 import Testpage from './Components/Test/TestResult/Test_11th/Testpage';
-import ScoreCard from './Components/Test/TestResult/Test_11th/ScoreCard';
 
 ////6 to 9 th
 import PaymentSummary6To9 from './Components/Test/TestResult/Test_6To9/PaymentSummary6To9';
 import PaymentConfirm6To9 from './Components/Test/TestResult/Test_6To9/PaymentConfirm6To9';
 import Assessment6To9 from './Components/Test/TestResult/Test_6To9/Assessment6To9';
 import Testpage6To9 from './Components/Test/TestResult/Test_6To9/Testpage6To9';
-import ScoreCard6To9 from './Components/Test/TestResult/Test_6To9/ScoreCard6To9';
 import ResultPage6To9 from './Components/Test/TestResult/Test_6To9/ResultPage6To9';
 
 ////7 th
@@ -70,13 +65,18 @@ import Assessment10thint from './Components/Test/TestResult/Test_10th_int/Assess
 import Testpage10thint from './Components/Test/TestResult/Test_10th_int/Testpage10thint';
 import ResultPage10thint from './Components/Test/TestResult/Test_10th_int/ResultPage10thint';
 
-//environment variable
-import dotenv from 'dotenv'
+
+////10 th
+import PaymentSummary12th from './Components/Test/TestResult/Test_12th/PaymentSummary12th';
+import PaymentConfirm12th from './Components/Test/TestResult/Test_12th/PaymentConfirm12th';
+import Assessment12th from './Components/Test/TestResult/Test_12th/Assessment12th';
+import Testpage12th from './Components/Test/TestResult/Test_12th/Testpage12th';
+import ResultPage12th from './Components/Test/TestResult/Test_12th/ResultPage12th';
+
 
 // import timer from './Components/Test/timer';
 
 function App() {
-    dotenv.config()
     return (
         <div className="App">
             <BrowserRouter>
@@ -100,7 +100,6 @@ function App() {
                     <Route exact path="/paymentassessment"> <Prodected Cmp={Assessment} /> </Route>
                     <Route exact path="/result"> <Prodected Cmp={ResultPage} /> </Route>
                     <Route exact path="/testpage" component={Testpage} countdownTimestampMs={1643673600000} />
-                    <Route exact path="/scorecard" component={ScoreCard} />
 
                     {/* /6 to 9 Test/ */}
                     <Route exact path="/test"> <Prodected Cmp={test} /> </Route>
@@ -109,7 +108,6 @@ function App() {
                     <Route exact path="/6th/paymentassessment"> <Prodected Cmp={Assessment6To9} /> </Route>
                     <Route exact path="/6th/result"> <Prodected Cmp={ResultPage6To9} /> </Route>
                     <Route exact path="/6th/testpage" component={Testpage6To9} countdownTimestampMs={1643673600000} />
-                    <Route exact path="/6th/scorecard" component={ScoreCard6To9} />
 
                     {/* /7 Test/ */}
                     <Route exact={true} path="/7th/paymentsummary"> <Prodected Cmp={PaymentSummary7th} /> </Route>
@@ -145,6 +143,14 @@ function App() {
                     <Route exact path="/10th/int/paymentassessment"> <Prodected Cmp={Assessment10thint} /> </Route>
                     <Route exact path="/10th/int/result"> <Prodected Cmp={ResultPage10thint} /> </Route>
                     <Route exact path="/10th/int/testpage" component={Testpage10thint} />
+
+                    
+                    {/* 12th Test/ */}
+                    <Route exact={true} path="/12th/paymentsummary"> <Prodected Cmp={PaymentSummary12th} /> </Route>
+                    <Route exact path="/12th/paymentconfirm"> <Prodected Cmp={PaymentConfirm12th} /> </Route>
+                    <Route exact path="/12th/paymentassessment"> <Prodected Cmp={Assessment12th} /> </Route>
+                    <Route exact path="/12th/result"> <Prodected Cmp={ResultPage12th} /> </Route>
+                    <Route exact path="/12th/testpage" component={Testpage12th} countdownTimestampMs={1643673600000} />
 
 
 

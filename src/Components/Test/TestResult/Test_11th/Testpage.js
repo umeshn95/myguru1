@@ -37,7 +37,8 @@ const Testpage = () => {
 
     const sendDataResult = (industry, question, id) => {
         let item = { id, industry, question, ans1, ans2, ans3, ans4, ans5 }
-        fetch(`${process.env.REACT_APP_API_URL}api/testresult`, {
+        setLoading(true)
+        fetch(`${process.env.REACT_APP_API_URL}/api/testresult`, {
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -53,6 +54,7 @@ const Testpage = () => {
     }
 
     const getAns = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/question`, {
             method: "GET",
             headers: {
@@ -72,7 +74,8 @@ const Testpage = () => {
     }
 
     const getData = () => {
-        fetch(`${process.env.REACT_APP_API_URL}api/studentquestion`, {
+        setLoading(true)
+        fetch(`${process.env.REACT_APP_API_URL}/api/studentquestion`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -91,7 +94,8 @@ const Testpage = () => {
     }
 
     const deleteData = () => {
-        fetch(`${process.env.REACT_APP_API_URL}api/deleteresult`, {
+        setLoading(true)
+        fetch(`${process.env.REACT_APP_API_URL}/api/deleteresult`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -113,6 +117,7 @@ const Testpage = () => {
         setAns5(0)
         var k = count + pk
         setCount(k)
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/question?page=${k}`, {
             method: "GET",
             headers: {

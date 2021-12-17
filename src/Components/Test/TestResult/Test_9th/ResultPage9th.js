@@ -169,7 +169,7 @@ const ResultPage6To9 = () => {
                     </div>
                     <hr />
                     <div>
-                        <BarChart />
+                        <BarChart data={data && data}/>
                     </div>
                     <div className="center mt-5">
                         <div className=" mx-5 w-75">

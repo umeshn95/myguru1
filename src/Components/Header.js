@@ -20,7 +20,7 @@ const Header = () => {
     }, [])
 
     const getCarrer = () => {
-        fetch(`${process.env.R.API_URL}/api/carrer`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/carrer`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",

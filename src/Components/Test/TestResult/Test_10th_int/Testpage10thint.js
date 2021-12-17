@@ -53,6 +53,7 @@ const Testpage10thint = () => {
 
     const sendDataResult = (industry, question, id) => {
         let item = { id, industry, question, ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11, ans12, ans13, ans14, ans15, ans16, ans17, ans18, ans19, ans20 }
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/int/testresult`, {
             method: "POST",
             headers: {
@@ -69,6 +70,7 @@ const Testpage10thint = () => {
     }
 
     const getAns = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/int/question`, {
             method: "GET",
             headers: {
@@ -88,6 +90,7 @@ const Testpage10thint = () => {
     }
 
     const getData = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/int/studentquestion`, {
             method: "GET",
             headers: {
@@ -144,6 +147,7 @@ const Testpage10thint = () => {
         setAns20(0)
         var k = count + pk
         setCount(k)
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/int/question?page=${k}`, {
             method: "GET",
             headers: {

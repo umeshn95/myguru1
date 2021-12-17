@@ -36,6 +36,7 @@ const Testpage7th = () => {
     }
 
     const sendDataResult = (industry, question, id) => {
+        setLoading(true)
         let item = { id, industry, question, ans1, ans2, ans3, ans4, ans5 }
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/testresult`, {
             method: "POST",
@@ -53,6 +54,7 @@ const Testpage7th = () => {
     }
 
     const getAns = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/question`, {
             method: "GET",
             headers: {
@@ -72,6 +74,7 @@ const Testpage7th = () => {
     }
 
     const getData = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/studentquestion`, {
             method: "GET",
             headers: {
@@ -91,6 +94,7 @@ const Testpage7th = () => {
     }
 
     const deleteData = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/deleteresult`, {
             method: "GET",
             headers: {
@@ -104,7 +108,7 @@ const Testpage7th = () => {
             })
         })
     }
-
+    
     const pagination = (pk) => {
         setAns1(0)
         setAns2(0)
@@ -113,6 +117,7 @@ const Testpage7th = () => {
         setAns5(0)
         var k = count + pk
         setCount(k)
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/7th/question?page=${k}`, {
             method: "GET",
             headers: {
@@ -136,13 +141,13 @@ const Testpage7th = () => {
         })
     }
 
-    if (loading) {
-        <Loader />
-    }
-
 
     return (
         <Fragment>
+        {loading ? (
+                <Loader />
+            ) : (
+                <Fragment>
             <div>
                 <Header />
                 {/* <!-- Welcome My Guru section  --> */}
@@ -216,6 +221,8 @@ const Testpage7th = () => {
                     </div>
                 </div>
             </div>
+        </Fragment>
+        )}
         </Fragment>
     )
 }

@@ -41,6 +41,7 @@ const Testpage10th = () => {
 
     const sendDataResult = (industry, question, id) => {
         let item = { id, industry, question, ans1, ans2, ans3, ans4, ans5 }
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/testresult`, {
             method: "POST",
             headers: {
@@ -74,6 +75,7 @@ const Testpage10th = () => {
     }
 
     const getAns = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/question`, {
             method: "GET",
             headers: {
@@ -93,6 +95,7 @@ const Testpage10th = () => {
     }
 
     const getData = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/studentquestion`, {
             method: "GET",
             headers: {
@@ -137,6 +140,7 @@ const Testpage10th = () => {
         setFindStatus("")
         var k = count + pk
         setCount(k)
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/question?page=${k}`, {
             method: "GET",
             headers: {

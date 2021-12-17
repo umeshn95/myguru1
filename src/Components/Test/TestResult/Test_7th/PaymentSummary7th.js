@@ -6,6 +6,7 @@ import { useAlert } from 'react-alert'
 import Loader from '../../../Loader/Loader'
 import React, { useEffect, useState } from "react"
 import Header from '../../../Header'
+import { Link } from 'react-router-dom'
 
 const PaymentSummary7th = () => {
 

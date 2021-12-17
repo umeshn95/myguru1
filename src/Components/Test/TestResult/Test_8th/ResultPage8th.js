@@ -4,7 +4,6 @@ import { useAlert } from 'react-alert'
 import { Table } from 'react-bootstrap';
 import Header from '../../../Header'
 import BarChart from './BarChart'
-import './PieChart.css'
 import './triangle.css'
 
 const tableData = {
