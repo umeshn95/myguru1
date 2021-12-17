@@ -23,16 +23,12 @@ const Header = () => {
 
     const getCarrer = () => {
         try {
-            let user = JSON.parse(localStorage.getItem('user-details'));
-            // const token = user.access;
             setLoading(true)
             fetch(`${process.env.R.API_URL}/api/carrer`, {
-            // fetch("https://myguruonline.herokuapp.com${process.env.R.API_URL}/api/carrer", {
                 method: "GET",
                 headers: {
                     "Accept": "application/json",
                     "Content-Type": "application/json",
-                    // "Authorization": `Bearer ${user && user.access}`
                 },
             }).then((result) => {
                 // console.log("Result", result.status)
@@ -161,7 +157,7 @@ const Header = () => {
                                     <div className="search-box">
                                         <input type="text" className="search-txt" placeholder="Search" />
                                         <a className="search-btn">
-                                            <i className="fa fa-search" aria-hidden="true"></i>
+                                            
                                         </a>
                                     </div>
                                 </li>

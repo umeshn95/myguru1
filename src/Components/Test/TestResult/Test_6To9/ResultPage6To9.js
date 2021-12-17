@@ -1,123 +1,101 @@
-import React, { useHistory, useState, useEffect, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import Loader from '../../../Loader/Loader';
 import { useAlert } from 'react-alert'
 import { Table } from 'react-bootstrap';
 import Header from '../../../Header'
-import BarChart from './BarChart'
-import PieChart from './PieChart'
-import {
-    Chart,
-    PieSeries,
-    Title,
-} from '@devexpress/dx-react-chart-material-ui';
-import { Animation } from '@devexpress/dx-react-chart';
-import Paper from '@material-ui/core/Paper';
-import './PieChart.css'
-import env from 'react-dotenv'
-
 const tableData = {
     color: "#000"
 }
 
 
 const ResultPage6To9 = () => {
-        // const history = useHistory();
-        const [data, setData] = useState([])
-        const [showGradeData, setShowGradeData] = useState([])
-        const [showindustry, setShowindustry] = useState([])
-        const [loading, setLoading] = useState(true)
-        const [title, setTitle] = useState()
-        const alert = useAlert()
-    
-    
-        useEffect(() => {
-            getCarrer()
-            GradeData()
-            getIndustry()
-            getTitle()
-        }, [])
-    
-        const getTitle = () => {
-            let user = JSON.parse(localStorage.getItem('user-details'));
-            setLoading(true)
-            fetch(`${process.env.REACT_APP_API_URL}/api/6th/title/`, {
-                // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/10th/result", {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${user && user.access}`
-                },
-            }).then((result) => {
-                result.json().then((resp) => {
-                    // console.log(result)
-                    // console.log(resp)
-                    setLoading(false)
-                    setTitle(resp[0])
-                })
+    // const history = useHistory();
+    const [data, setData] = useState([])
+    const [showGradeData, setShowGradeData] = useState([])
+    const [showindustry, setShowindustry] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [title, setTitle] = useState()
+    const alert = useAlert()
+
+
+    useEffect(() => {
+        getCarrer()
+        GradeData()
+        getIndustry()
+        getTitle()
+    }, [])
+
+    const getTitle = () => {
+        let user = JSON.parse(localStorage.getItem('user-details'));
+        setLoading(true)
+        fetch(`${process.env.REACT_APP_API_URL}/api/6th/title/`, {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${user && user.access}`
+            },
+        }).then((result) => {
+            result.json().then((resp) => {
+                setLoading(false)
+                setTitle(resp[0])
             })
-        }
-    
-        const getCarrer = () => {
-            let user = JSON.parse(localStorage.getItem('user-details'));
-            setLoading(true)
-            // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/7th/result", {
-            fetch(`${process.env.REACT_APP_API_URL}/api/6th/result`, {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${user && user.access}`
-                },
-            }).then((result) => {
-                // console.log("Result", result.status)
-                result.json().then((resp) => {
-                    // console.log(result)
-                    // console.log(resp)
-                    setLoading(false)
-                    setData(resp.data)
-                    if (result.status !== 200) {
-                        alert.error(resp.detail)
-                    }
-                })
+        })
+    }
+
+    const getCarrer = () => {
+        let user = JSON.parse(localStorage.getItem('user-details'));
+        setLoading(true)
+        fetch(`${process.env.REACT_APP_API_URL}/api/6th/result`, {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${user && user.access}`
+            },
+        }).then((result) => {
+            result.json().then((resp) => {
+                setLoading(false)
+                setData(resp.data)
+                if (result.status !== 200) {
+                    alert.error(resp.detail)
+                }
             })
-        }
-    
-        const GradeData = () => {
-            let user = JSON.parse(localStorage.getItem('user-details'));
-            // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/7th/showgrade/", {
-            fetch(`${process.env.REACT_APP_API_URL}/api/6th/showgrade/`, {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${user && user.access}`
-                },
-            }).then((result) => {
-                result.json().then((resp) => {
-                    // console.log(resp)
-                    setShowGradeData(resp)
-                })
+        })
+    }
+
+    const GradeData = () => {
+        let user = JSON.parse(localStorage.getItem('user-details'));
+        fetch(`${process.env.REACT_APP_API_URL}/api/6th/showgrade/`, {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${user && user.access}`
+            },
+        }).then((result) => {
+            result.json().then((resp) => {
+                setShowGradeData(resp)
             })
-        }
-        const getIndustry = () => {
-            let user = JSON.parse(localStorage.getItem('user-details'));
-            fetch(`${process.env.REACT_APP_API_URL}/api/6th/showindusty/`, {
-                // fetch("https://myguruonline.herokuapp.com${process.env.REACT_APP_API_URL}/api/7th/showindusty/", {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${user && user.access}`
-                },
-            }).then((result) => {
-                result.json().then((resp) => {
-                    // console.log(resp)
-                    setShowindustry(resp)
-                })
+        })
+    }
+
+    const getIndustry = () => {
+        let user = JSON.parse(localStorage.getItem('user-details'));
+        fetch(`${process.env.REACT_APP_API_URL}/api/6th/showindusty/`, {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${user && user.access}`
+            },
+        }).then((result) => {
+            result.json().then((resp) => {
+                setShowindustry(resp)
             })
-        }
-    
+        })
+    }
+
 
     return (
         <Fragment>
@@ -176,9 +154,9 @@ const ResultPage6To9 = () => {
                                     {
                                         showGradeData.map((e) =>
                                             <tr>
-                                            <td>{e.grade}</td>
-                                            <td>{e.score}</td>
-                                                
+                                                <td>{e.grade}</td>
+                                                <td>{e.score}</td>
+
                                             </tr>
 
                                         )
@@ -225,7 +203,7 @@ const ResultPage6To9 = () => {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
+                                                <tr>
                                                     <td></td>
                                                     <td style={{ border: "1px solid #000" }} ><b>Score:</b> <br />Your Assessment score in
                                                         {e.industry}  {e.totalCount}
@@ -321,7 +299,7 @@ const ResultPage6To9 = () => {
                                                                     <>
                                                                     </>
                                                             }
-                                                  
+
                                                         </div>
 
                                                         <br />

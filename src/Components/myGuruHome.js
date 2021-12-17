@@ -1,15 +1,10 @@
 import React from 'react';
-import { Dropdown } from 'react-bootstrap';
 import './css/bootstrap.min.css';
 import './css/pogo-slider.min.css';
 import './css/style.css';
 import './css/custom.css';
-import { Link } from 'react-router-dom';
 import Header from './Header';
 const myGuruHome = () => {
-
-
-
     return (
 
         <>
