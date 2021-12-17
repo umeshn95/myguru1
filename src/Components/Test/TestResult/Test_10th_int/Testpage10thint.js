@@ -43,7 +43,7 @@ const Testpage10thint = () => {
         getAns()
         getData()
         deleteData()
-    }, [])
+    }, [getAns, getData, deleteData])
 
     const submit = (e, industry, question, id) => {
         pagination(e)

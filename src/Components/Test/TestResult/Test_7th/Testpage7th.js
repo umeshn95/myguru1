@@ -5,7 +5,7 @@ import Loader from '../../../Loader/Loader';
 import { useHistory } from 'react-router-dom'
 import Header from '../../../Header'
 import NewTimer from '../../../../NewTimer'
-
+import BarChart from './BarChart'
 
 const Testpage7th = () => {
     const alert = useAlert()
