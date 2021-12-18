@@ -179,6 +179,7 @@ const Testpage10thint = () => {
                 <Fragment>
                     <div>
                         <Header />
+
                         <div className="section margin-top_7">
                             <div className="container-fluid">
                                 <div className="row">
@@ -251,6 +252,7 @@ const Testpage10thint = () => {
                                                         </form>
                                                         <div className="mr-5 mt-3">
                                                             <a ><button className="pay_btn float-right col-lg-1 mr-5" onClick={() => submit(1, e.industry.industry, e.question, e.id)} >Next</button></a>
+
                                                         </div>
                                                     </div>
                                                 </div>

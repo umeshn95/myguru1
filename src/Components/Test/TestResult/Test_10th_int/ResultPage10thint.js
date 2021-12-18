@@ -22,13 +22,14 @@ const ResultPage10thint = () => {
 
 
     useEffect(() => {
-        getCarrer()
         GradeData()
         getIndustry()
         getTitle()
+        getCarrer()
     }, [])
 
     const getTitle = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/int/title/`, {
             method: "GET",
             headers: {
@@ -46,6 +47,7 @@ const ResultPage10thint = () => {
 
 
     const getCarrer = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/int/result`, {
             method: "GET",
             headers: {
@@ -55,16 +57,17 @@ const ResultPage10thint = () => {
             },
         }).then((result) => {
             result.json().then((resp) => {
-                setLoading(false)
                 setData(resp.data)
                 if (result.status !== 200) {
                     alert.error(resp.detail)
                 }
+                setLoading(false)
             })
         })
     }
 
     const GradeData = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/int/showgrade/`, {
             method: "GET",
             headers: {
@@ -75,11 +78,13 @@ const ResultPage10thint = () => {
         }).then((result) => {
             result.json().then((resp) => {
                 setShowGradeData(resp)
+                setLoading(false)
             })
         })
     }
 
     const getIndustry = () => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}/api/10th/int/showindusty/`, {
             method: "GET",
             headers: {
@@ -90,6 +95,7 @@ const ResultPage10thint = () => {
         }).then((result) => {
             result.json().then((resp) => {
                 setShowindustry(resp)
+                setLoading(false)
             })
         })
     }
@@ -163,7 +169,9 @@ const ResultPage10thint = () => {
                     </div>
                     <hr />
                     <div>
+
                         <BarChart data={data && data} />
+
                     </div>
                     <div className="center mt-5">
                         <div className=" mx-5 w-75">
@@ -225,10 +233,7 @@ const ResultPage10thint = () => {
                                                                 :
                                                                 <>
                                                                 </>
-
                                                         }
-
-
                                                     </td>
                                                     <td >
                                                         <div className="d-flex justify-centent-center">
@@ -351,7 +356,9 @@ const ResultPage10thint = () => {
                                                         </div>
 
                                                         <br />
+
                                                         <td className='center'>
+
                                                             <div className="my-5" style={{ height: '200px' }}>
                                                                 <Piechart Newdata={e.totalCount} />
                                                             </div>

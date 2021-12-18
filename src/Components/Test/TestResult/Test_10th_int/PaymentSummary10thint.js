@@ -72,12 +72,14 @@ const PaymentSummary10thint = () => {
                                                         </>
                                                         :
                                                         <>
+
                                                             <h5 className="text-start mt-1 fw-bold text-dark">Number of questions : <span style={{ fontWeight: "400", fontSize: "16px" }}>{count}</span></h5>
                                                             <h5 className="text-start mt-3 fw-bold text-dark">Duration : <span style={{ fontWeight: "400", fontSize: "16px" }}>{e.duration}</span> minutes</h5>
                                                             <h5 className="text-start mt-3 fw-bold text-dark">Student Name : <span style={{ fontWeight: "400", fontSize: "16px" }}>{user && user.last_name}</span></h5>
                                                             <h5 className="text-start mt-3 fw-bold text-dark">Date : <span style={{ fontWeight: "400", fontSize: "16px" }}>{e.date}</span></h5>
                                                             <h5 className="text-start mt-3 fw-bold text-dark">Class : <span style={{ fontWeight: "400", fontSize: "16px" }}>{e.grade.grade}</span></h5>
                                                             <h5 className="text-start mt-3 fw-bold text-dark mb-3">Test Instruction : <span style={{ fontWeight: "400", fontSize: "16px" }}>{e.grade.testInstruction}</span></h5>
+
                                                         </>
                                                 }
 

@@ -15,6 +15,8 @@ import Prodected from './Prodected'
 import VocationalImages from './Components/VocationalImages';
 import ResultPage from './Components/Test/TestResult/Test_11th/ResultPage'
 import PageNotFound from './Components/PageNotFound';
+import YouTube from './Components/YouTubeVideos/YouTube';
+
 
 // 11 th
 import test from './Components/test';
@@ -92,7 +94,11 @@ function App() {
                     <Route exact path="/examlist" component={ExamList} />
                     <Route exact path="/contactus" component={ContactUs} />
                     <Route exact path="/aboutus" component={AboutUs} />
+                    <Route exact path="/youtube" component={YouTube} />
                     
+
+
+
                     {/* /11Test/ */}
                     <Route exact path="/test"> <Prodected Cmp={test} /> </Route>
                     <Route exact={true} path="/paymentsummary"> <Prodected Cmp={PaymentSummary} /> </Route>
