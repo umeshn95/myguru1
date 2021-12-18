@@ -3,7 +3,7 @@ import Loader from '../../../Loader/Loader';
 import { useAlert } from 'react-alert'
 import { Table } from 'react-bootstrap';
 import Header from '../../../Header'
-
+import PieChar from '../../TestResult/Test_7th/PieChar'
 const tableData = {
     color: "#000"
 }
@@ -18,7 +18,7 @@ const ResultPage6To9 = () => {
     const alert = useAlert()
     let user = JSON.parse(localStorage.getItem('user-details'));
 
-
+console.log(showindustry)
     useEffect(() => {
         getCarrer()
         GradeData()
@@ -176,9 +176,13 @@ const ResultPage6To9 = () => {
                                 <tbody style={{ border: "1px solid #000" }}>
                                     {
                                         showindustry.map((e) =>
+                                        <>
                                             <tr >
                                                 <td style={{ padding: "7px", borderTop: "1px solid #000" }}>{e.industry_Id}. {e.industry}</td>
+                                               
                                             </tr>
+                                           
+                                            </>
                                         )
                                     }
 
@@ -255,6 +259,7 @@ const ResultPage6To9 = () => {
                                                                     :
                                                                     <>
                                                                     </>
+                                                                    
                                                             }
                                                             {
                                                                 e.grade === "Average" ?
@@ -308,6 +313,11 @@ const ResultPage6To9 = () => {
                                                         </div>
 
                                                         <br />
+                                                        <td>
+                                                <div className="my-5" style={{height:'200px'}}>
+                                                            <PieChar Newdata={e.totalCount}/>
+                                                            </div>
+                                                </td>
                                                     </td>
                                                 </tr>
                                             </tbody>

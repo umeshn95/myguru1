@@ -5,6 +5,7 @@ import { Table } from 'react-bootstrap';
 import Header from '../../../Header'
 import BarChart from './BarChart'
 import './triangle.css'
+import Piechart from '../Test_7th/PieChar';
 
 const tableData = {
     color: "#000"
@@ -17,9 +18,10 @@ const ResultPage8th = () => {
     const [loading, setLoading] = useState(true)
     const [showGradeData, setShowGradeData] = useState([])
     const [showindustry, setShowindustry] = useState([])
+    const [totalres, setTotalres] = useState()
     let user = JSON.parse(localStorage.getItem('user-details'));
     const alert = useAlert()
-
+console.log(data)
     useEffect(() => {
         getCarrer()
         GradeData()
@@ -54,6 +56,7 @@ const ResultPage8th = () => {
         }).then((result) => {
             result.json().then((resp) => {
                 setData(resp.data)
+                setTotalres(resp.ind_1)
                 setLoading(false)
                 if (result.status !== 200) {
                     alert.error(resp.detail)
@@ -134,7 +137,7 @@ const ResultPage8th = () => {
                                                     <td>{e.industry}</td>
                                                     <td>{e.totalCount}</td>
                                                     <td>{e.grade}</td>
-                                                    <td>{e.grade}</td>
+                                                   
                                                 </tr>
                                             )}
                                     </tbody>
@@ -142,19 +145,15 @@ const ResultPage8th = () => {
                                     <thead>
                                         <tr>
                                             <th>Total</th>
-                                            <th>Score</th>
-                                            <th>Maximum Score</th>
+                                            <th>{totalres}</th>
+                                            <th>60</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {
-                                            data.map((e) =>
-                                                <tr>
-                                                    <td>Total</td>
-                                                    <td>{e.ind_1}</td>
-                                                    <td>60</td>
-                                                </tr>
-                                            )}
+                                        
+                                            
+                                              
+                                            
                                     </tbody>
                                 </Table>
                             </div>
@@ -363,6 +362,11 @@ const ResultPage8th = () => {
                                                         </div>
 
                                                         <br />
+                                                        <td>
+                                                            <div className="my-5" style={{height:'200px'}}>
+                                                            <Piechart Newdata={e.totalCount}/>
+                                                            </div>
+                                                    </td>
                                                         </td>
                                                 </tr>
                                             </tbody>

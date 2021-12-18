@@ -216,19 +216,18 @@ const Testpage8th = () => {
                                             </div>
                                         </div>
                                         {
-                                            data.map((e, i) =>
+                                            data.map((data, i) =>
                                                 <div className="" key={i}>
-                                                    <h1 className="fw-bold gray text-center">{count} To {dataTemp.count} </h1>
-                                                    <h1 className="fw-bold gray text-center">{e.question} </h1>
+                                                    <h1 className="fw-bold gray text-center">{count}  {dataTemp.count} </h1>
+                                                    <h1 className="fw-bold gray text-center"><img style={{height:'400px',width:'400px'}} src={process.env.REACT_APP_API_URL+data.question}></img> </h1>
                                                     <div classNameName="col mt-3">
 
                                                         <form action="" className=" d-flex justify-content-center">
-                                                            <ul className="row box_text ">
-                                                                <li className="col-lg-12">(a) {e.a} <input className="float-right mt-3" type="radio" name={e.id} value={e.a} onChange={handleChange} /></li>
-                                                                <li className="col-lg-12">(b) {e.b} <input className="float-right mt-3" type="radio" name={e.id} value={e.b} onChange={handleChange} /></li>
-                                                                <li className="col-lg-12">(c) {e.c} <input className="float-right mt-3" type="radio" name={e.id} value={e.c} onChange={handleChange} /></li>
-                                                                <li className="col-lg-12">(d) {e.d} <input className="float-right mt-3" type="radio" name={e.id} value={e.d} onChange={handleChange} /></li>
-                                                                <li className="col-lg-12">(e) {e.e} <input className="float-right mt-3" type="radio" name={e.id} value={e.e} onChange={handleChange} /></li>
+                                                        <ul className="row box_text ">
+                                                                <li className="col-lg-12">(a) <img style={{height:'100px',width:'100px'}}  src={process.env.REACT_APP_API_URL+data.a}></img> <input className="float-right mt-3" type="radio" name={data.id} value={data.a} onChange={handleChange} /></li>
+                                                                <li className="col-lg-12">(b)  <img style={{height:'100px',width:'100px'}} src={process.env.REACT_APP_API_URL+data.b}></img> <input className="float-right mt-3" type="radio" name={data.id} value={data.b} onChange={handleChange} /></li>
+                                                                <li className="col-lg-12">(c)  <img style={{height:'100px',width:'100px'}} src={process.env.REACT_APP_API_URL+data.c}></img> <input className="float-right mt-3" type="radio" name={data.id} value={data.c} onChange={handleChange} /></li>
+                                                                <li className="col-lg-12">(d)  <img style={{height:'100px',width:'100px'}} src={process.env.REACT_APP_API_URL+data.d}></img> <input className="float-right mt-3" type="radio" name={data.id} value={data.d} onChange={handleChange} /></li>
                                                             </ul>
 
                                                         </form>
@@ -244,7 +243,7 @@ const Testpage8th = () => {
                                                                     findStatus === 400 ?
                                                                         <>
                                                                             <div className="alert alert-danger" role="alert">
-                                                                                {`Opps Wrong Answer this => ${curAns}`}
+                                                                                'Oops Wrong Answer'
                                                                             </div>
                                                                         </>
                                                                         :
@@ -253,7 +252,7 @@ const Testpage8th = () => {
                                                             }
                                                         </div>
                                                         <div className="mr-5 mt-3">
-                                                            <a ><button className="pay_btn float-right col-lg-1 mr-5" onClick={() => submit(1, e.industry.industry, e.question, e.id)} >Next</button></a>
+                                                            <a><button className="pay_btn float-right col-lg-1 mr-5" onClick={() => submit(1, data.industry.industry, data.question, data.id)} >Next</button></a>
                                                         </div>
                                                     </div>
                                                 </div>
