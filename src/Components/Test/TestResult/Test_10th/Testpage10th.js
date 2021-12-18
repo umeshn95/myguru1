@@ -220,20 +220,22 @@ const Testpage10th = () => {
                                             {
                                                 data.map((e, i) =>
                                                     <div className="" key={i}>
-                                                        <h1 className="fw-bold gray text-center">{count} To {dataTemp.count} </h1>
-                                                        <h1 className="fw-bold gray text-center">{e.question} </h1>
+                                                        <h5 className="fw-bold gray text-center">{count} of {dataTemp.count} </h5>
+                                                        <div className="center">
+                                                            <h5 className="fw-bold gray text-center w-50">{e.question} </h5>
+                                                        </div>
                                                         <div classNameName="col mt-3">
 
                                                             <form action="" className=" d-flex justify-content-center">
                                                                 <ul className="row box_text ">
-                                                                    <li className="col-lg-12">(a) {e.a} <input className="float-right mt-3" type="radio" name={e.id} value={e.a} onChange={handleChange} /></li>
-                                                                    <li className="col-lg-12">(b) {e.b} <input className="float-right mt-3" type="radio" name={e.id} value={e.b} onChange={handleChange} /></li>
-                                                                    <li className="col-lg-12">(c) {e.c} <input className="float-right mt-3" type="radio" name={e.id} value={e.c} onChange={handleChange} /></li>
+                                                                    <li className="col-lg-12"><span style={{ float: "left" }}>(a) {e.a}</span> <input className="float-right mt-3" type="radio" name={e.id} value={e.a} onChange={handleChange} /></li>
+                                                                    <li className="col-lg-12"><span style={{ float: "left" }}>(b) {e.b}</span> <input className="float-right mt-3" type="radio" name={e.id} value={e.b} onChange={handleChange} /></li>
+                                                                    <li className="col-lg-12"><span style={{ float: "left" }}>(c) {e.c}</span> <input className="float-right mt-3" type="radio" name={e.id} value={e.c} onChange={handleChange} /></li>
 
                                                                     {
                                                                         e.d ?
                                                                             <>
-                                                                                <li className="col-lg-12">(d) {e.d} <input className="float-right mt-3" type="radio" name={e.id} value={e.d} onChange={handleChange} /></li>
+                                                                                <li className="col-lg-12"><span style={{ float: "left" }}>(d) {e.d}</span> <input className="float-right mt-3" type="radio" name={e.id} value={e.d} onChange={handleChange} /></li>
                                                                             </>
                                                                             :
                                                                             <>
@@ -242,7 +244,7 @@ const Testpage10th = () => {
                                                                     {
                                                                         e.e ?
                                                                             <>
-                                                                                <li className="col-lg-12">(e) {e.e} <input className="float-right mt-3" type="radio" name={e.id} value={e.e} onChange={handleChange} /></li>
+                                                                                <li className="col-lg-12"><span style={{ float: "left" }}>(e) {e.e}</span> <input className="float-right mt-3" type="radio" name={e.id} value={e.e} onChange={handleChange} /></li>
                                                                             </>
                                                                             :
                                                                             <>
@@ -256,19 +258,19 @@ const Testpage10th = () => {
                                                                     findStatus === 200 ?
                                                                         <>
                                                                             <div className="alert alert-success" role="alert">
-                                                                                 {`Right Answer this => ${curAns}`}
+                                                                                {`Right Answer this => ${curAns}`}
                                                                             </div>
                                                                         </>
                                                                         :
                                                                         findStatus === 400 ?
-                                                                        <>
-                                                                            <div className="alert alert-danger" role="alert">
-                                                                            {`Opps Wrong Answer this => ${curAns}`}
-                                                                            </div>
-                                                                        </>
-                                                                        :
-                                                                        <>
-                                                                        </>
+                                                                            <>
+                                                                                <div className="alert alert-danger" role="alert">
+                                                                                    {`Opps Wrong Answer this => ${curAns}`}
+                                                                                </div>
+                                                                            </>
+                                                                            :
+                                                                            <>
+                                                                            </>
                                                                 }
                                                             </div>
 

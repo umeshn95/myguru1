@@ -18,7 +18,7 @@ const ResultPage6To9 = () => {
     const alert = useAlert()
     let user = JSON.parse(localStorage.getItem('user-details'));
 
-console.log(showindustry)
+    console.log(showindustry)
     useEffect(() => {
         getCarrer()
         GradeData()
@@ -144,7 +144,7 @@ console.log(showindustry)
                     <div className="center mb-5">
                         <div className="mx-5 w-75">
                             <h2>Key to Grades</h2>
-                            <table className="table text-left border text-center">
+                            <table style={{ border: "1px solid #000" }} className="table text-left text-center">
                                 <thead>
                                     <tr className="score_card">
                                         <th scope="col">Area</th>
@@ -176,12 +176,12 @@ console.log(showindustry)
                                 <tbody style={{ border: "1px solid #000" }}>
                                     {
                                         showindustry.map((e) =>
-                                        <>
-                                            <tr >
-                                                <td style={{ padding: "7px", borderTop: "1px solid #000" }}>{e.industry_Id}. {e.industry}</td>
-                                               
-                                            </tr>
-                                           
+                                            <>
+                                                <tr >
+                                                    <td style={{ padding: "7px", borderTop: "1px solid #000" }}>{e.industry_Id}. {e.industry}</td>
+
+                                                </tr>
+
                                             </>
                                         )
                                     }
@@ -199,7 +199,7 @@ console.log(showindustry)
 
                                 {
                                     data.map((e) =>
-                                        <table className="table text-left border">
+                                        <table style={{ border: "1px solid #000" }} className="table text-left">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">{e.industry_Grade}</th>
@@ -210,14 +210,12 @@ console.log(showindustry)
                                             <tbody>
                                                 <tr>
                                                     <td></td>
-                                                    <td style={{ border: "1px solid #000" }} ><b>Score:</b> <br />Your Assessment score in
+                                                    <td  ><b>Score:</b> <br />Your Assessment score in
                                                         {e.industry}  {e.totalCount}
                                                         <br /><hr /><b>Darkened area represents your Grade Range.</b> <br /> <hr />
                                                         <b><i>Interpretation:</i></b> <br />{e.interpretatio.interpretationTitle}<br /><hr />
                                                         <b><i>What you can do / What more you can do:</i></b><br />
-
                                                         {
-
                                                             e.interpretatio.YouCanDoPoint_1 ?
                                                                 <ul className='mt-2 mx-4'>
                                                                     <li style={{ listStyleType: "circle" }}>{e.interpretatio.YouCanDoPoint_1}</li>
@@ -234,8 +232,8 @@ console.log(showindustry)
 
 
                                                     </td>
-                                                    <td >
-                                                        <div className="d-flex ">
+                                                    <td className=''>
+                                                        <div className="d-flex justify-content-center">
                                                             {
                                                                 e.grade === "Below Average" ?
                                                                     <>
@@ -259,7 +257,7 @@ console.log(showindustry)
                                                                     :
                                                                     <>
                                                                     </>
-                                                                    
+
                                                             }
                                                             {
                                                                 e.grade === "Average" ?
@@ -313,11 +311,11 @@ console.log(showindustry)
                                                         </div>
 
                                                         <br />
-                                                        <td>
-                                                <div className="my-5" style={{height:'200px'}}>
-                                                            <PieChar Newdata={e.totalCount}/>
+                                                        <td className='center'>
+                                                            <div className="my-5" style={{ height: '200px' }}>
+                                                                <PieChar Newdata={e.totalCount} />
                                                             </div>
-                                                </td>
+                                                        </td>
                                                     </td>
                                                 </tr>
                                             </tbody>

@@ -142,7 +142,7 @@ const ResultPage10thint = () => {
                     <div className="center mb-5">
                         <div className="mx-5 w-75">
                             <h2>Key to Grades</h2>
-                            <table className="table text-left border text-center">
+                            <table style={{ border: "1px solid #000" }} className="table text-center">
                                 <thead>
                                     <tr className="score_card">
                                         <th scope="col">Area</th>
@@ -169,13 +169,8 @@ const ResultPage10thint = () => {
                     </div>
                     <hr />
                     <div>
-                        {loading ? (
-                            <Loader />
-                        ) : (
 
-                            <BarChart data={data && data} />
-                        )
-                    }
+                        <BarChart data={data && data} />
 
                     </div>
                     <div className="center mt-5">
@@ -204,7 +199,7 @@ const ResultPage10thint = () => {
 
                                 {
                                     data.map((e) =>
-                                        <table class="table text-left border">
+                                        <table style={{ border: "1px solid #000" }} class="table text-left">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">
@@ -219,7 +214,7 @@ const ResultPage10thint = () => {
                                             <tbody>
                                                 <tr>
                                                     <td></td>
-                                                    <td style={{ border: "1px solid #000" }} ><b>Score:</b> <br />Your Assessment score in
+                                                    <td ><b>Score:</b> <br />Your Assessment score in
                                                         {e.industry}  {e.totalCount}
                                                         <br /><hr /><b>Darkened area represents your Grade Range.</b> <br /> <hr />
                                                         <b><i>Interpretation:</i></b> <br />{e.interpretatio.interpretationTitle}<br /><hr />
@@ -241,7 +236,7 @@ const ResultPage10thint = () => {
                                                         }
                                                     </td>
                                                     <td >
-                                                        <div className="d-flex ">
+                                                        <div className="d-flex justify-centent-center">
                                                             {
                                                                 e.grade === "Below Average" ?
                                                                     <>
@@ -361,7 +356,9 @@ const ResultPage10thint = () => {
                                                         </div>
 
                                                         <br />
-                                                        <td>
+
+                                                        <td className='center'>
+
                                                             <div className="my-5" style={{ height: '200px' }}>
                                                                 <Piechart Newdata={e.totalCount} />
                                                             </div>

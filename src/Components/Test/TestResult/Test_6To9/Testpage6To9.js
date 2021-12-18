@@ -26,7 +26,7 @@ const Testpage6To9 = () => {
     getAns()
     getData()
     deleteData()
-}, [])
+  }, [])
 
 
   const submit = (e, industry, question, id) => {
@@ -140,7 +140,7 @@ const Testpage6To9 = () => {
       });
     });
   };
-  
+
 
   return (
     <Fragment>
@@ -150,139 +150,142 @@ const Testpage6To9 = () => {
         <Fragment>
           <div>
             <Header />
-              <div className="section margin-top_7">
-                <div className="container-fluid">
-                  <div className="row">
-                    <div className="">
-                      <div className="full">
-                        <div className="mt-5">
-                          <i className="far fa-user-circle mt-2 float-left"></i>
-                          <div className="row float-left ml-2">
-                            <h5 className=" mt-4 fw-bold gray">
-                              Candidate Name: {user && user.last_name}
+            <div className="section margin-top_7">
+              <div className="container-fluid">
+                <div className="row">
+                  <div className="">
+                    <div className="full">
+                      <div className="mt-5">
+                        <i className="far fa-user-circle mt-2 float-left"></i>
+                        <div className="row float-left ml-2">
+                          <h5 className=" mt-4 fw-bold gray">
+                            Candidate Name: {user && user.last_name}
+                            <span></span>
+                          </h5>
+                          {dataExam.map((e, i) => (
+                            <h5 className=" fw-bold gray" key={i}>
+                              Exam Name: {e.testName}
                               <span></span>
                             </h5>
-                            {dataExam.map((e, i) => (
-                              <h5 className=" fw-bold gray" key={i}>
-                                Exam Name: {e.testName}
-                                <span></span>
-                              </h5>
-                            ))}
+                          ))}
+                        </div>
+                        <div className="float-right mr-4">
+                          <h5 className=" mt-4 fw-bold gray">
+                            Total Questions: <span></span>
+                          </h5>
+                          <h5 className=" fw-bold gray">
+                            Remaining Questions: <span></span>
+                          </h5>
+                          {/* Timer */}
+                          <div className="time">
+                            <NewTimer />
                           </div>
-                          <div className="float-right mr-4">
-                            <h5 className=" mt-4 fw-bold gray">
-                              Total Questions: <span></span>
-                            </h5>
-                            <h5 className=" fw-bold gray">
-                              Remaining Questions: <span></span>
-                            </h5>
-                            {/* Timer */}
-                            <div className="time">
-                              <NewTimer />
-                            </div>
-                            {/* Timer */}
+                          {/* Timer */}
+                        </div>
+                      </div>
+                    </div>
+                    {data.map((e, i) => (
+                      <div className="" key={i}>
+                        <h5 className="fw-bold gray text-center">
+                          {count} of {dataTemp.count}{" "}
+                        </h5>
+                        <div className="center">
+                          <h5 className="fw-bold gray w-50">
+                            {e.question}{" "}
+                          </h5>
+                        </div>
+                        <div classNameName="col mt-3">
+                          <form
+                            action=""
+                            className="d-flex justify-content-center"
+                          >
+                            <ul className="row box_text ">
+                              <li className="col-lg-12">
+                                <span style={{ float: "left" }}>(a) {e.a}</span>{" "}
+                                <input
+                                  className="float-right mt-3"
+                                  type="radio"
+                                  name="radioGroup"
+                                  value={ans1}
+                                  onChange={() => setAns1(1)}
+                                />
+                              </li>
+                              <li className="col-lg-12">
+                                <span style={{ float: "left" }}>(b) {e.b}</span>{" "}
+                                <input
+                                  className="float-right mt-3"
+                                  type="radio"
+                                  value={ans2}
+                                  onChange={() => setAns2(1)}
+                                />
+                              </li>
+                              <li className="col-lg-12">
+                                <span style={{ float: "left" }}>(c) {e.c}</span>{" "}
+                                <input
+                                  className="float-right mt-3"
+                                  type="radio"
+                                  value={ans3}
+                                  onChange={() => setAns3(1)}
+                                />
+                              </li>
+                              {e.d ? (
+                                <>
+                                  <li className="col-lg-12">
+                                    (d) {e.d}{" "}
+                                    <input
+                                      className="float-right mt-3"
+                                      type="radio"
+                                      value={ans4}
+                                      onChange={() => setAns4(1)}
+                                    />
+                                  </li>
+                                </>
+                              ) : (
+                                <></>
+                              )}
+                              {e.e ? (
+                                <>
+                                  <li className="col-lg-12">
+                                    (e) {e.e}{" "}
+                                    <input
+                                      className="float-right mt-3"
+                                      type="radio"
+                                      value={ans5}
+                                      onChange={() => setAns5(1)}
+                                    />
+                                  </li>
+                                </>
+                              ) : (
+                                <></>
+                              )}
+                            </ul>
+                          </form>
+
+                          <div className="mr-5 mt-3">
+                            <a>
+                              <button
+                                className="pay_btn float-right col-lg-1 mr-5"
+                                onClick={() =>
+                                  submit(
+                                    1,
+                                    e.industry.industry,
+                                    e.question,
+                                    e.id
+                                  )
+                                }
+                              >
+                                Next
+                              </button>
+                            </a>
                           </div>
                         </div>
                       </div>
-                      {data.map((e, i) => (
-                        <div className="" key={i}>
-                          <h1 className="fw-bold gray text-center">
-                            {count} To {dataTemp.count}{" "}
-                          </h1>
-                          <h1 className="fw-bold gray text-center">
-                            {e.question}{" "}
-                          </h1>
-                          <div classNameName="col mt-3">
-                            <form
-                              action=""
-                              className=" d-flex justify-content-center"
-                            >
-                              <ul className="row box_text ">
-                                <li className="col-lg-12">
-                                  (a) {e.a}{" "}
-                                  <input
-                                    className="float-right mt-3"
-                                    type="radio"
-                                    name="radioGroup"
-                                    value={ans1}
-                                    onChange={() => setAns1(1)}
-                                  />
-                                </li>
-                                <li className="col-lg-12">
-                                  (b) {e.b}{" "}
-                                  <input
-                                    className="float-right mt-3"
-                                    type="radio"
-                                    value={ans2}
-                                    onChange={() => setAns2(1)}
-                                  />
-                                </li>
-                                <li className="col-lg-12">
-                                  (c) {e.c}{" "}
-                                  <input
-                                    className="float-right mt-3"
-                                    type="radio"
-                                    value={ans3}
-                                    onChange={() => setAns3(1)}
-                                  />
-                                </li>
-                                {e.d ? (
-                                  <>
-                                    <li className="col-lg-12">
-                                      (d) {e.d}{" "}
-                                      <input
-                                        className="float-right mt-3"
-                                        type="radio"
-                                        value={ans4}
-                                        onChange={() => setAns4(1)}
-                                      />
-                                    </li>
-                                  </>
-                                ) : (
-                                  <></>
-                                )}
-                                {e.e ? (
-                                  <>
-                                    <li className="col-lg-12">
-                                      (e) {e.e}{" "}
-                                      <input
-                                        className="float-right mt-3"
-                                        type="radio"
-                                        value={ans5}
-                                        onChange={() => setAns5(1)}
-                                      />
-                                    </li>
-                                  </>
-                                ) : (
-                                  <></>
-                                )}
-                              </ul>
-                            </form>
-                            <div className="mr-5 mt-3">
-                              <a>
-                                <button
-                                  className="pay_btn float-right col-lg-1 mr-5"
-                                  onClick={() =>
-                                    submit(
-                                      1,
-                                      e.industry.industry,
-                                      e.question,
-                                      e.id
-                                    )
-                                  }
-                                >
-                                  Next
-                                </button>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
-              {/* <!-- end section --> */}
+            </div>
+            {/* <!-- end section --> */}
           </div>
         </Fragment>
       )}
