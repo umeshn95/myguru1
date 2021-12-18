@@ -3,6 +3,11 @@ import { Link, useHistory } from 'react-router-dom';
 import React, { useState, useEffect } from 'react'
 import Loader from './Loader/Loader';
 import { useAlert } from 'react-alert'
+import './css/responsive.css'
+import './css/bootstrap.min.css'
+import './css/pogo-slider.min.css'
+import './css/style.css'
+import './css/custom.css'
 
 const Header = () => {
     const history = useHistory();
@@ -49,7 +54,7 @@ const Header = () => {
             <header className="top-header">
                 <nav className="navbar header-nav navbar-expand-lg">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="/"><img className="pb-5" src="assets/images/logo.png" alt="image" /></a>
+                        <a className="navbar-brand" href="/"><img className="pb-5" src="/assets/images/logo.png" alt="image" /></a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                             <span></span>
                             <span></span>
@@ -84,9 +89,6 @@ const Header = () => {
                             <ul className="navbar-nav">
                                 <li className="dropdown">
                                     <Dropdown>
-                                        {/* <Dropdown.Toggle style={{ background: "none", color: "#000", border: "none" }} className="dropdown-toggle" data-toggle="dropdown" ><a className="nav-link dropdown-toggle">
-                                                Collaboration</a>
-                                            </Dropdown.Toggle> */}
                                         <Dropdown.Toggle style={{ background: "none", color: "#fff", border: "none" }} id="dropdown-basic" data-toggle="dropdown"><a className="nav-link dropdown-toggle" href="javascript:;">
                                             <b className=""></b>Collaboration</a>
                                         </Dropdown.Toggle>

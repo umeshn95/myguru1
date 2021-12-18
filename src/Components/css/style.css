@@ -507,28 +507,38 @@ a.navbar-brand img {
 
 /* payement */
 .pay_btn {
-  width: 150px;
-  height: 50px;
-  border-radius: 15px;
-  background: #6bb171;
+  width: 110px;
+  height: 42px;
+  border-radius: 8px;
+  background: #6e3cbc;
   border: none;
   color: #fff;
   font-size: 1.6rem;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
   font-weight: bold;
-  box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
+
+  transition: 0.5s all;
+}
+.pay_btn:hover {
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.7);
 }
 .pay_btn3 {
-  width: 150px;
-  height: 40px;
-  border-radius: 15px;
-  background: #6bb171;
+  width: 130px;
+  height: 42px;
+  border-radius: 8px;
+  background: #6e3cbc;
   border: none;
   color: #fff;
-  font-size: 0.9rem;
-  font-weight: 500;
-  box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  transition: 0.5s all;
 }
-.proceed_test {
+.pay_btn3:hover {
+  color: #fff;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.7);
+}
+/* .proceed_test {
   width: 250px;
   height: 70px;
   border-radius: 25px;
@@ -539,17 +549,15 @@ a.navbar-brand img {
   font-size: 1.4rem;
   font-weight: bold;
   box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
-}
+} */
 .back_payment {
-  background: linear-gradient(to top, rgba(255, 0, 0, 0.2), rgb(230, 97, 97));
+  background: linear-gradient(to top, #edd2f3, #c888d6);
   padding: 15px;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 .back_payment2 {
-  background: linear-gradient(to top, rgba(255, 0, 0, 0.2), rgb(238, 160, 160));
-  padding: 15px;
-  border-radius: 50px;
-  height: 500px;
+  background: linear-gradient(to top, #edd2f3, #c888d6);
+  border-radius: 25px;
 }
 .back_payment3 {
   background: linear-gradient(
@@ -557,10 +565,8 @@ a.navbar-brand img {
     rgba(252, 252, 252, 0.2),
     rgb(255, 255, 255)
   );
-  padding: 15px;
-  border-radius: 50px;
+  border-radius: 25px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
-  height: 500px;
 }
 .fa-user-circle {
   font-size: 100px;
@@ -2280,7 +2286,7 @@ p {
   border-radius: 18px;
   color: white;
 }
-.heading_main button:hover{
+.heading_main button:hover {
   background-color: blueviolet;
 }
 
@@ -2794,14 +2800,14 @@ section.inner_banner h3 {
   line-height: 40px;
 }
 
-.Login .loginform .field .eyeIcon i{
+.Login .loginform .field .eyeIcon i {
   position: absolute;
   width: 45px;
   line-height: 40px;
   margin-left: 90%;
   cursor: pointer;
 }
-.Login .loginform .field .eyeIcon2 i{
+.Login .loginform .field .eyeIcon2 i {
   position: absolute;
   width: 45px;
   line-height: 40px;

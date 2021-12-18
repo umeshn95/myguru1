@@ -147,7 +147,7 @@ const ResultPage7th = () => {
                     <div className="center mb-5">
                         <div className="mx-5 w-75">
                             <h2>Key to Grades</h2>
-                            <table class="table text-left border text-center">
+                            <table style={{ border: "1px solid #000" }} class="table text-center">
                                 <thead>
                                     <tr class="score_card">
                                         <th scope="col">High Score</th>
@@ -198,7 +198,7 @@ const ResultPage7th = () => {
                                 <h2>Aptitude Test Analysis</h2>
                                 {
                                     data.map((e) =>
-                                        <table class="table text-left border">
+                                        <table style={{ border: "1px solid #000" }} class="table text-left">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">
@@ -213,7 +213,7 @@ const ResultPage7th = () => {
                                             <tbody>
                                                 <tr>
                                                     <td></td>
-                                                    <td style={{ border: "1px solid #000" }} ><b>Score:</b> <br />Your Assessment score in
+                                                    <td  ><b>Score:</b> <br />Your Assessment score in
                                                         {e.industry}  {e.totalCount}
                                                         <br /><hr /><b>Darkened area represents your Grade Range.</b> <br /> <hr />
                                                         <b><i>Interpretation:</i></b> <br />{e.interpretatio.interpretationTitle}<br /><hr />
@@ -225,15 +225,15 @@ const ResultPage7th = () => {
                                                             <li style={{ listStyleType: "circle" }}>{e.interpretatio.YouCanDoPoint_5}</li>
                                                         </ul>
                                                     </td>
-                                                   
+
                                                     <td >
-                                                    {console.log(e.grade)
+                                                        {console.log(e.grade)
                                                         }
-                                                        <div className="d-flex ">
-                                                        {
+                                                        <div className="d-flex justify-content-center">
+                                                            {
                                                                 e.grade === "Low" ?
                                                                     <>
-                                                                    <div className='text-center'>
+                                                                        <div className='text-center'>
                                                                             <small>{showGradeData[4] && showGradeData[4].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Low</small>
@@ -267,11 +267,11 @@ const ResultPage7th = () => {
                                                             {
                                                                 e.grade === "Below Average" ?
                                                                     <>
-                                                                    <div className='text-center'>
+                                                                        <div className='text-center'>
                                                                             <small>{showGradeData[4] && showGradeData[4].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Low</small>
-                                                                                                                                                   </div>
+                                                                        </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[3] && showGradeData[3].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
@@ -310,7 +310,7 @@ const ResultPage7th = () => {
                                                                             <small>{showGradeData[3] && showGradeData[3].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Below Average</small>
-                                                                            
+
                                                                         </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[3] && showGradeData[3].score}</small>
@@ -336,11 +336,11 @@ const ResultPage7th = () => {
                                                             {
                                                                 e.grade === "Above Average" ?
                                                                     <>
-                                                                    <div className='text-center'>
+                                                                        <div className='text-center'>
                                                                             <small>{showGradeData[4] && showGradeData[4].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Low</small>
-                                                                           
+
                                                                         </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[3] && showGradeData[3].score}</small>
@@ -353,28 +353,28 @@ const ResultPage7th = () => {
                                                                             <small>Average</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                        <small>{showGradeData[1] && showGradeData[1].score}</small>
+                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Above Average</small>
                                                                             <small className='d-flex center text-danger'>{e.totalCount}</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                        <small>{showGradeData[1] && showGradeData[1].score}</small>
+                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Hign</small>
                                                                             <small className='d-flex center text-danger'>{e.totalCount}</small>
                                                                         </div>
-                                                                       
+
                                                                     </>
                                                                     :
                                                                     <>
                                                                     </>
                                                             }
-                                                            
+
                                                             {
                                                                 e.grade === "High" ?
                                                                     <>
-                                                                    <div className='text-center'>
+                                                                        <div className='text-center'>
                                                                             <small>{showGradeData[4] && showGradeData[4].grade}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Low</small>
@@ -403,19 +403,19 @@ const ResultPage7th = () => {
                                                                     </>
                                                                     :
                                                                     <>
-                                                                    
+
                                                                     </>
                                                             }
                                                         </div>
 
                                                         <br />
-                                                        <td>
-                                                            <div className="my-5" style={{height:'200px'}}>
-                                                            <PieChar Newdata={e.totalCount}/>
+                                                        <td className='center'>
+                                                            <div className="my-5" style={{ height: '200px' }}>
+                                                                <PieChar Newdata={e.totalCount} />
                                                             </div>
-                                                    </td>
                                                         </td>
-                                                        
+                                                    </td>
+
                                                 </tr>
                                             </tbody>
                                         </table>

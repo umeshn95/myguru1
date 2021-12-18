@@ -13,7 +13,7 @@ const Footer = () => {
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                             <div className="footer_blog">
                                 <div className="footerimg margin-bottom_30">
-                                    <a href="/"> <img className="w-75" src="assets/images/footer_logo.png" alt="#" /></a>
+                                    <a href="/"> <img className="w-75" src="/assets/images/footer_logo.png" alt="#" /></a>
                                 </div>
                                 <div className="full white_fonts">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -52,9 +52,9 @@ const Footer = () => {
                             <div className="footer_blog full white_fonts">
                                 <h3>Contact us</h3>
                                 <ul className="full">
-                                    <li><img src="assets/images/i5.png" /><span>Delhi 145, India</span></li>
-                                    <li><img src="assets/images/i6.png" /><span><a href="mailto:info@myguru.co.in">info@myguru.co.in</a></span></li>
-                                    <li><img src="assets/images/i7.png" /><span><a href="tel:+919876543210">+91 9876543210</a></span></li>
+                                    <li><img src="/assets/images/i5.png" /><span>Delhi 145, India</span></li>
+                                    <li><img src="/assets/images/i6.png" /><span><a href="mailto:info@myguru.co.in">info@myguru.co.in</a></span></li>
+                                    <li><img src="/assets/images/i7.png" /><span><a href="tel:+919876543210">+91 9876543210</a></span></li>
                                 </ul>
                             </div>
                         </div>
