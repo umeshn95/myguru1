@@ -223,53 +223,22 @@ const ResultPage6To9 = () => {
                                                     <td >
                                                         {/* <img className="ml-5 pl-5" src="./assets/images/pyramid.png" /> */}
                                                         <div className="d-flex justify-content-center">
+                                     
                                                             {
-                                                                e.grade === "Below Average" ?
+                                                                e.grade === "Good" ?
                                                                     <>
+        
                                                                         <div className='text-center'>
-                                                                            <small>{showGradeData[3] && showGradeData[3].score}</small>
+                                                                            <small>{showGradeData[2] && showGradeData[2].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Below Average</small>
+                                                                            <small>Good</small>
                                                                             <small className='d-flex center text-danger'>{e.totalCount}</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                            <small>{showGradeData[2] && showGradeData[2].score}</small>
+                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Average</small>
-                                                                        </div>
-                                                                        <div className='text-center'>
-                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
-                                                                            <div className="arrow-up3 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Hign</small>
-                                                                        </div>
-                                                                        <div className='text-center'>
-                                                                            <small>{showGradeData[0] && showGradeData[0].score}</small>
-                                                                            <div className="arrow-up4 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Excellent</small>
-                                                                        </div>
-                                                                    </>
-                                                                    :
-                                                                    <>
-                                                                    </>
-                                                            }
-                                                            {
-                                                                e.grade === "Hige" ?
-                                                                    <>
-                                                                        <div className='text-center'>
-                                                                            <small>{showGradeData[3] && showGradeData[3].score}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Below Average</small>
-                                                                        </div>
-                                                                        <div className='text-center'>
-                                                                            <small>{showGradeData[2] && showGradeData[2].score}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Average</small>
-                                                                        </div>
-                                                                        <div className='text-center'>
-                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
-                                                                            <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Hign</small>
-                                                                            <small className='d-flex center text-danger'>{e.totalCount}</small>
+                                                                            
                                                                         </div>
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[0] && showGradeData[0].score}</small>
@@ -285,21 +254,17 @@ const ResultPage6To9 = () => {
                                                                 e.grade === "Average" ?
                                                                     <>
                                                                         <div className='text-center'>
-                                                                            <small>{showGradeData[3] && showGradeData[3].score}</small>
+                                                                            <small>{showGradeData[2] && showGradeData[2].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Below Average</small>
+                                                                            <small>Good</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                            <small>{showGradeData[2] && showGradeData[2].score}</small>
+                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Average</small>
                                                                             <small className='d-flex center text-danger'>{e.totalCount}</small>
                                                                         </div>
-                                                                        <div className='text-center'>
-                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Hign</small>
-                                                                        </div>
+        
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[0] && showGradeData[0].score}</small>
                                                                             <div className="arrow-up4 mx-lg-5 mx-md-2 mx-sm-1"></div>
@@ -314,20 +279,16 @@ const ResultPage6To9 = () => {
                                                                 e.grade === "Excellent" ?
                                                                     <>
                                                                         <div className='text-center'>
-                                                                            <small>{showGradeData[3] && showGradeData[3].grade}</small>
+                                                                            <small>{showGradeData[2] && showGradeData[2].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Below Average</small>
+                                                                            <small>Good</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                            <small>{showGradeData[2] && showGradeData[2].grade}</small>
+                                                                            <small>{showGradeData[1] && showGradeData[1].grade}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Average</small>
                                                                         </div>
-                                                                        <div className='text-center'>
-                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
-                                                                            <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
-                                                                            <small>Hign</small>
-                                                                        </div>
+                                        
                                                                         <div className='text-center'>
                                                                             <small>{showGradeData[0] && showGradeData[0].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
