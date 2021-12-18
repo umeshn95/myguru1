@@ -40,10 +40,10 @@ const Testpage10thint = () => {
 
 
     useEffect(() => {
-        getAns()
-        getData()
-        deleteData()
-    }, [getAns, getData, deleteData])
+      getAns();
+      getData();
+      deleteData();
+    }, []);
 
     const submit = (e, industry, question, id) => {
         pagination(e)
@@ -206,17 +206,31 @@ const Testpage10thint = () => {
                                             {
                                                 data.map((e, i) =>
                                                     <div className="" key={i}>
-                                                        <h1 className="fw-bold gray text-center">{count} To {dataTemp.count} </h1>
+                                                        <h1 className="fw-bold gray text-center">{count} of {dataTemp.count} </h1>
                                                         <h1 className="fw-bold gray text-center">{e.question} </h1>
                                                         <div classNameName="col mt-3">
 
                                                             <form action="" className=" d-flex justify-content-center">
-                                                                <ul className="row box_text ">
-                                                                    <li className="col-lg-12">(a) {e.a} <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns1(1)} /></li>
-                                                                    <li className="col-lg-12">(b) {e.b} <input className="float-right mt-3" type="radio" value={ans2} onChange={() => setAns2(1)} /></li>
-                                                                    <li className="col-lg-12">(c) {e.c} <input className="float-right mt-3" type="radio" value={ans3} onChange={() => setAns3(1)} /></li>
-                                                                    <li className="col-lg-12">(d) {e.d} <input className="float-right mt-3" type="radio" value={ans4} onChange={() => setAns4(1)} /></li>
-                                                                    <li className="col-lg-12">(e) {e.e} <input className="float-right mt-3" type="radio" value={ans5} onChange={() => setAns5(1)} /></li>
+                                                                <ul className="row box_text">           
+                                                                <div style={{display:'flex',justifyContent:'flex-end'}}>
+                                                                    <h5 style={{padding:'0 5px'}}>L</h5>
+                                                                    <h5 style={{padding:'0 5px'}}>D</h5>
+                                                                    <h5 style={{padding:'0 5px'}}>N</h5>
+                                                                </div>
+                                                                    <li className="col-lg-12">(1) {e.a} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns1(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns1(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns1(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.b} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns2(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns2(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns2(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.c} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns3(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns3(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns3(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.d} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns3(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns3(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns3(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.e} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns4(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns4(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns4(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.f} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns5(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns5(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns5(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.g} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns6(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns6(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns6(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.h} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns7(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns7(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns7(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.i} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns8(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns8(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns8(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.j} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns9(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns9(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns9(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.k} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns10(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns10(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns10(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.l} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns11(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns11(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns11(0)} /></li>
+                                                                    <li className="col-lg-12">(1) {e.m} <input className="float-right mt-3 " type="radio" name="radioGroup" value={ans1} onChange={() => setAns12(1)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns12(0)} /> <input className="float-right mt-3" type="radio" name="radioGroup" value={ans1} onChange={() => setAns12(0)} /></li>
+                                                                    
                                                                 </ul>
 
                                                             </form>

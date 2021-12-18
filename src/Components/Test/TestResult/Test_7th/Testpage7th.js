@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom'
 import Header from '../../../Header'
 import NewTimer from '../../../../NewTimer'
 import BarChart from './BarChart'
-
+import '../Test_8th/triangle.css'
 const Testpage7th = () => {
     const alert = useAlert()
     const history = useHistory();

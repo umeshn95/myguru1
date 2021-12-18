@@ -4,6 +4,7 @@ import { useAlert } from 'react-alert'
 import { Table } from 'react-bootstrap';
 import Header from '../../../Header'
 import BarChart from './BarChart'
+import Piechart from '../Test_7th/PieChar';
 
 const tableData = {
     color: "#000"
@@ -350,6 +351,11 @@ const ResultPage10thint = () => {
                                                         </div>
 
                                                         <br />
+                                                        <td>
+                                                            <div className="my-5" style={{height:'200px'}}>
+                                                            <Piechart Newdata={e.totalCount}/>
+                                                            </div>
+                                                        </td>
                                                     </td>
                                                 </tr>
                                             </tbody>
