@@ -146,7 +146,7 @@ const ResultPage10th = () => {
                     <div className="center mb-5">
                         <div className="mx-5 w-75">
                             <h2>Key to Grades</h2>
-                            <table class="table text-left border text-center">
+                            <table style={{ border: "1px solid #000" }} class="table text-center">
                                 <thead>
                                     <tr class="score_card">
                                         <th scope="col">Score</th>
@@ -185,7 +185,7 @@ const ResultPage10th = () => {
                     </div>
                     <hr />
                     <div>
-                        <BarChart data={data && data}/>
+                        <BarChart data={data && data} />
                     </div>
                     <div className="center mt-5">
                         <div className=" mx-5 w-75">
@@ -212,7 +212,7 @@ const ResultPage10th = () => {
                                 <h2>Aptitude Test Analysis</h2>
                                 {
                                     data.map((e) =>
-                                        <table class="table text-left border">
+                                        <table style={{ border: "1px solid #000" }} class="table text-left">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">
@@ -227,7 +227,7 @@ const ResultPage10th = () => {
                                             <tbody>
                                                 <tr>
                                                     <td></td>
-                                                    <td style={{ border: "1px solid #000" }} ><b>Score:</b> <br />Your Assessment score in
+                                                    <td ><b>Score:</b> <br />Your Assessment score in
                                                         {e.industry}  {e.totalCount}
                                                         <br /><hr /><b>Darkened area represents your Grade Range.</b> <br /> <hr />
                                                         <b><i>Interpretation:</i></b> <br />{e.interpretatio.interpretationTitle}<br /><hr />
@@ -240,7 +240,7 @@ const ResultPage10th = () => {
                                                         </ul>
                                                     </td>
                                                     <td >
-                                                        <div className="d-flex ">
+                                                        <div className="d-flex justify-content-center">
                                                             {
                                                                 e.grade === "Below Average" ?
                                                                     <>
@@ -279,12 +279,12 @@ const ResultPage10th = () => {
                                                                             <small>Below Average</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                        <small>{showGradeData[2] && showGradeData[2].score}</small>
+                                                                            <small>{showGradeData[2] && showGradeData[2].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Average</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                        <small>{showGradeData[1] && showGradeData[1].score}</small>
+                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Hign</small>
                                                                             <small className='d-flex center text-danger'>{e.totalCount}</small>
@@ -360,12 +360,12 @@ const ResultPage10th = () => {
                                                         </div>
 
                                                         <br />
-                                                        <td>
-                                                            <div className="my-5" style={{height:'200px'}}>
-                                                            <Piechart Newdata={e.totalCount}/>
+                                                        <td className='center'>
+                                                            <div className="my-5" style={{ height: '200px' }}>
+                                                                <Piechart Newdata={e.totalCount} />
                                                             </div>
                                                         </td>
-                                                        </td>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>

@@ -42,7 +42,7 @@ const ResultPage6To9 = () => {
             })
         })
     }
-    
+
 
     const getCarrer = () => {
         fetch(`${process.env.REACT_APP_API_URL}/api/9th/result`, {
@@ -103,7 +103,7 @@ const ResultPage6To9 = () => {
                 <Fragment>
                     <div className="center">
                         <div style={{ marginTop: "100px" }} className='mb-5 w-75'>
-                        <div className="center mb-5">
+                            <div className="center mb-5">
                                 <div className=' w-lg-50 w-sm-100'>
                                     <h2 style={{ border: "1px solid #000", borderRadius: "10px", background: "#41B5F8" }} className='p-3'><strong>PERSONALITY AND ADJUSTMENT TEST</strong></h2>
                                 </div>
@@ -145,7 +145,7 @@ const ResultPage6To9 = () => {
                     <div className="center mb-5">
                         <div className="mx-5 w-75">
                             <h2>Key to Grades</h2>
-                            <table className="table text-left border text-center">
+                            <table style={{ border: "1px solid #000" }} className="table text-center">
                                 <thead>
                                     <tr className="score_card">
                                         <th scope="col">Area</th>
@@ -157,9 +157,9 @@ const ResultPage6To9 = () => {
                                     {
                                         showGradeData.map((e) =>
                                             <tr>
-                                            <td>{e.grade}</td>
-                                            <td>{e.score}</td>
-                                                
+                                                <td>{e.grade}</td>
+                                                <td>{e.score}</td>
+
                                             </tr>
                                         )
                                     }
@@ -170,7 +170,7 @@ const ResultPage6To9 = () => {
                     </div>
                     <hr />
                     <div>
-                        <BarChart data={data && data}/>
+                        <BarChart data={data && data} />
                     </div>
                     <div className="center mt-5">
                         <div className=" mx-5 w-75">
@@ -197,7 +197,7 @@ const ResultPage6To9 = () => {
 
                                 {
                                     data.map((e) =>
-                                        <table class="table text-left border">
+                                        <table style={{ border: "1px solid #000" }} className="table text-left">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">{e.industry_Grade}</th>
@@ -207,8 +207,8 @@ const ResultPage6To9 = () => {
                                             </thead>
                                             <tbody>
                                                 <tr>
-
-                                                    <td style={{ border: "1px solid #000" }} ><b>Score:</b> <br />Your Assessment score in
+                                                    <td></td>
+                                                    <td  ><b>Score:</b> <br />Your Assessment score in
                                                         {e.industry}  {e.totalCount}
                                                         <br /><hr /><b>Darkened area represents your Grade Range.</b> <br /> <hr />
                                                         <b><i>Interpretation:</i></b> <br />{e.interpretatio.interpretationTitle}<br /><hr />
@@ -222,7 +222,7 @@ const ResultPage6To9 = () => {
                                                     </td>
                                                     <td >
                                                         {/* <img className="ml-5 pl-5" src="./assets/images/pyramid.png" /> */}
-                                                        <div className="d-flex ">
+                                                        <div className="d-flex justify-content-center">
                                                             {
                                                                 e.grade === "Below Average" ?
                                                                     <>
@@ -261,12 +261,12 @@ const ResultPage6To9 = () => {
                                                                             <small>Below Average</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                        <small>{showGradeData[2] && showGradeData[2].score}</small>
+                                                                            <small>{showGradeData[2] && showGradeData[2].score}</small>
                                                                             <div className="arrow-up2 mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Average</small>
                                                                         </div>
                                                                         <div className='text-center'>
-                                                                        <small>{showGradeData[1] && showGradeData[1].score}</small>
+                                                                            <small>{showGradeData[1] && showGradeData[1].score}</small>
                                                                             <div className="arrow-up mx-lg-5 mx-md-2 mx-sm-1"></div>
                                                                             <small>Hign</small>
                                                                             <small className='d-flex center text-danger'>{e.totalCount}</small>
@@ -342,12 +342,12 @@ const ResultPage6To9 = () => {
                                                         </div>
 
                                                         <br />
-                                                        <td>
-                                                            <div className="my-5" style={{height:'200px'}}>
-                                                            <Piechart Newdata={e.totalCount}/>
+                                                        <td className='center'>
+                                                            <div className="my-5" style={{ height: '200px' }}>
+                                                                <Piechart Newdata={e.totalCount} />
                                                             </div>
-                                                    </td>
                                                         </td>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
