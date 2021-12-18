@@ -76,7 +76,7 @@ const PaymentSummary10thint = () => {
                                                             <h1 className="text-start mt-3 fw-bold text-light">Duration : <span>{e.duration}</span> minutes</h1>
                                                             <h1 className="text-start mt-3 fw-bold text-light">Student Name : <span>{user && user.last_name}</span></h1>
                                                             <h1 className="text-start mt-3 fw-bold text-light">Date : <span>{e.date}</span></h1>
-                                                            <h1 className="text-start mt-3 fw-bold text-light">Class : <span>{e.grade.grade}</span></h1>
+                                                            <h1 className="text-start mt-3 fw-bold text-light">Class : <span>{e.grade.Class}</span></h1>
                                                             <h1 className="text-start mt-3 fw-bold text-light">Test Instruction : <span>{e.grade.testInstruction}</span></h1>
                                                         </>
                                                 }
