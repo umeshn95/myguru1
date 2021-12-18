@@ -8,9 +8,9 @@ import Loader from '../Loader/Loader';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
-    { width: 768, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 3 },
+    { width: 550, itemsToShow: 1     },
+    { width: 768, itemsToShow: 2 },
+    { width: 1200, itemsToShow: 2 },
 ];
 
 const YouTube = () => {
@@ -53,15 +53,17 @@ const YouTube = () => {
                                 <Carousel breakPoints={breakPoints}>
                                     {
                                         data.map((e) =>
-                                            <Iframe url={e.videoLink}
+                                         <div>
+                                                <Iframe url={e.videoLink}
                                                 width="450px"
-                                                height="450px"
+                                                height="500px"
                                                 id="myId"
                                                 className="responsive-video"
                                                 display="initial"
                                                 position="relative"
                                                 allow="fullscreen"
                                             />
+                                         </div>
                                         )
                                     }
                                 </Carousel>
