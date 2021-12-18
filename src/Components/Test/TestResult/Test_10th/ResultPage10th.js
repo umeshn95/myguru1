@@ -45,53 +45,53 @@ const ResultPage10th = () => {
     }
 
     const getCarrer = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/api/8th/result`, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${user && user.access}`
-            },
-        }).then((result) => {
-            result.json().then((resp) => {
-                setData(resp.data)
-                setLoading(false)
-                if (result.status !== 200) {
-                    alert.error(resp.detail)
-                }
-            })
-        })
-    }
+      fetch(`${process.env.REACT_APP_API_URL}/api/10th/result`, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user && user.access}`,
+        },
+      }).then((result) => {
+        result.json().then((resp) => {
+          setData(resp.data);
+          setLoading(false);
+          if (result.status !== 200) {
+            alert.error(resp.detail);
+          }
+        });
+      });
+    };
 
     const GradeData = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/api/8th/showgrade/`, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${user && user.access}`
-            },
-        }).then((result) => {
-            result.json().then((resp) => {
-                setShowGradeData(resp)
-            })
-        })
-    }
+      fetch(`${process.env.REACT_APP_API_URL}/api/10th/showgrade/`, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user && user.access}`,
+        },
+      }).then((result) => {
+        result.json().then((resp) => {
+          setShowGradeData(resp);
+        });
+      });
+    };
 
     const getIndustry = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/api/8th/showindusty/`, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${user && user.access}`
-            },
-        }).then((result) => {
-            result.json().then((resp) => {
-                setShowindustry(resp)
-            })
-        })
-    }
+      fetch(`${process.env.REACT_APP_API_URL}/api/10th/showindusty/`, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user && user.access}`,
+        },
+      }).then((result) => {
+        result.json().then((resp) => {
+          setShowindustry(resp);
+        });
+      });
+    };
 
 
     return (
@@ -241,7 +241,7 @@ const ResultPage10th = () => {
                                                     </td>
                                                     <td >
                                                         <div className="d-flex justify-content-center">
-                                                            {
+                                                        {
                                                                 e.grade === "Below Average" ?
                                                                     <>
                                                                         <div className='text-center'>
